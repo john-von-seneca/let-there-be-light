@@ -1,0 +1,9 @@
+
+[github-projects/cask]
+checkout = git clone 'git@github.com:cask/cask.git' 'cask'
+
+[github-projects/prelude]
+checkout = git clone 'git@github.com:bbatsov/prelude.git' 'prelude'
+
+[.emacs.d]
+checkout = git clone 'https://github.com/balasanjeevi/dot-emacs.git' '.emacs.d'
