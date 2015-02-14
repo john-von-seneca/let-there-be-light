@@ -2,9 +2,8 @@
 
 #Installation
 
-1. git clone git@github.com:balasanjeevi/let-there-be-light.git
-2. ```bash
+```bash
+git clone git@github.com:balasanjeevi/let-there-be-light.git
 chmod +x init_the_world.sh
+./init_the_world.sh
 ```
-3. ./init_the_world.sh
-
