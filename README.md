@@ -3,6 +3,8 @@
 #Installation
 
 1. git clone git@github.com:balasanjeevi/let-there-be-light.git
-2. chmod +x init_the_world.sh
+2. ```bash
+chmod +x init_the_world.sh
+```
 3. ./init_the_world.sh
 
