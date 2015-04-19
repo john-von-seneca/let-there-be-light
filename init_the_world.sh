@@ -40,6 +40,7 @@ cd $HOME
 # mr -c $HOME/let-there-be-light/.mrconfig update
 mr update
 
+git clone git@github.com:balasanjeevi/dot-emacs.git $HOME/.emacs.d
 $HOME/.emacs.d/install.sh
 
 
