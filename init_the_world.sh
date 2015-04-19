@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # create github projects directory
-GITREPOS="$HOME/github-projects"
+GITREPOS="$HOME/git-repos"
 if [ -d $GITREPOS ]; then
   echo "$GITREPOS found... not creating"
 else
