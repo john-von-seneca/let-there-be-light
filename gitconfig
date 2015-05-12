@@ -1,0 +1,47 @@
+
+[alias]
+	ci = commit
+	com  = commit
+	df = diff
+	s  = status
+	st = status
+	co = checkout
+	cl = clone
+	llog = log --date=local
+	l = log
+	lg = log
+	br = branch
+	sh = show $COMMIT
+	last = diff HEAD^ HEAD
+	graph = log --graph --oneline --all
+	graph2 = log --oneline --decorate --all --decorate --graph
+	tree = log --graph --decorate --pretty=oneline --abbrev-commit
+	lg1 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+lg2 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(bold white)— %an%C(reset)' --abbrev-commit
+lg = !"git lg1"
+	pr = pull --rebase origin production-release
+	dc = diff --cached
+	dcw = diff --cached --word-diff
+	rh = reset HEAD
+[color]
+	ui = true
+[user]
+	name = Balasanjeevi B
+	email = balasanjeevi.b@flipkart.com
+[config]
+	symlinks=true
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[core]
+	excludesfile = /Users/balasanjeevi.b/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

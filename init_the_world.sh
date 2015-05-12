@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+ln -s $PWD/gitconfig ~/.gitconfig
+
 # create github projects directory
 GITREPOS="$HOME/git-repos"
 if [ -d $GITREPOS ]; then
