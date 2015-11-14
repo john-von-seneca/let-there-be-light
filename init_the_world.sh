@@ -2,8 +2,10 @@
 
 ln -s $PWD/gitconfig ~/.gitconfig
 
+NEODIR="$HOME/neo-human"
+
 # create github projects directory
-GITREPOS="$HOME/git-repos"
+GITREPOS="$NEODIR/repos"
 if [ -d $GITREPOS ]; then
   echo "$GITREPOS found... not creating"
 else
@@ -45,8 +47,9 @@ mr update
 git clone git@github.com:balasanjeevi/dot-emacs.git $HOME/.emacs.d
 $HOME/.emacs.d/install.sh
 
+# need to add symlinks to zshrc, zsh_functions, zsh_completions
 
-
+#git clone https://github.com/zsh-users/antigen.git
 
 
 
