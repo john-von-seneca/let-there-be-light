@@ -142,6 +142,7 @@ alias pi="pip3 install --user --upgrade"
 alias pis="pip3 search"
 alias gc="git clone"
 #alias +="mkdir"
+alias xclip="xclip -selection c"
 
 #####################################################
 ################  ALIASES - END #####################
