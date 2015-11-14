@@ -112,13 +112,15 @@ antigen apply
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
 if [[ "$OSTYPE" = "linux-gnu" ]]; then
 	#echo "linux-gnu"
-	source zshrc_custom_linux
+	source $SCRIPT_DIR/zshrc_custom_linux
 	#echo "linux done baby"
 elif [[ "$OSTYPE" = "darwin"* ]]; then
     #echo "osx"
-	source zshrc_custom_osx
+	source $SCRIPT_DIR/zshrc_custom_osx
 elif [[ "$OSTYPE" = "cygwin" ]]; then
         echo "OS TYPE:: cygwin"
 elif [[ "$OSTYPE" = "msys" ]]; then
