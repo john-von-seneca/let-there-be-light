@@ -1,6 +1,4 @@
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
-
 
 #### ENVS
 ## for cuda
@@ -20,7 +18,6 @@ fi
 
 export DEFAULT_USER=f
 
-
 # cuda stuff -- start
 export CUDA_ROOT=/usr/local/cuda-7.0
 export LD_LIBRARY_PATH=${CUDA_ROOT}/lib64:$LD_LIBRARY_PATH
@@ -28,9 +25,6 @@ PATH=${CUDA_ROOT}/bin:${PATH}
 export PATH
 # cuda stuff -- stop
 
-
-alias pi="pip3 install --upgrade --user"
-alias pis="pip3 search"
 alias in="sudo apt-fast -y install"
 alias se="sudo apt-cache search"
 alias yy="sudo apt-get update; sudo apt-fast -y upgrade"
