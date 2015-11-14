@@ -3,6 +3,7 @@
 ln -s $PWD/gitconfig ~/.gitconfig
 
 NEODIR="$HOME/neo-human"
+HOME_DIR="$NEODIR/repos/let-there-be-light"
 
 # create github projects directory
 GITREPOS="$NEODIR/repos"
@@ -50,6 +51,16 @@ $HOME/.emacs.d/install.sh
 # need to add symlinks to zshrc, zsh_functions, zsh_completions
 
 #git clone https://github.com/zsh-users/antigen.git
+
+# symlink tigrc
+LINK_TIG="$HOME/.tigrc"
+if [ -L "$LINK_TIG" ]; then
+  echo "$LINK_TIG found... backing it up"
+  TIME_NOW=`date +%F.%H%M`
+  mv $LINK_TIG $LINK_TIG.bkp.$TIME_NOW
+fi
+echo "creating symlink $LINK_TIG ... "
+ln -s $HOME_LIGHT/tigrc $LINK_TIG
 
 
 
