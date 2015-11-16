@@ -4,7 +4,7 @@ export ZSH=~/.oh-my-zsh
 
 source $ZSH/oh-my-zsh.sh
 source ~/neo-human/repos/let-there-be-light/zshrc_custom
-
+source ~/.zshrc_local
 #MY_PATH="`dirname \"$0\"`"              # relative
 #MY_PATH="`( cd \"$MY_PATH\" && pwd )`"  # absolutized and normalized
 #if [ -z "$MY_PATH" ] ; then

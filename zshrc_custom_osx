@@ -1,6 +1,3 @@
-# required for homebrew
-export HOMEBREW_GITHUB_API_TOKEN=f2d6bfecef65542251c15b4d93cbdbacd85f4efb
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 ### PATH
