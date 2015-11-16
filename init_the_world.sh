@@ -83,6 +83,17 @@ echo "creating symlink $LINK_WTHR ... "
 ln -s $HOME_LIGHT/weather_machi.sh $LINK_WTHR
 
 
+# symlink weather_machi.sh
+LINK_I3DIR="$HOME/.i3"
+if [ -L "$LINK_I3DIR" ]; then
+  echo "$LINK_I3DIR found... backing it up"
+  TIME_NOW=`date +%F.%H%M`
+  mv $LINK_I3DIR $LINK_I3DIR.bkp.$TIME_NOW
+fi
+echo "creating symlink $LINK_I3DIR ... "
+ln -s $HOME_LIGHT/.i3 $LINK_I3DIR
+
+
 
 
 

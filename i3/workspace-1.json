@@ -1,0 +1,48 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "normal",
+    "current_border_width": 2,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1026,
+       "width": 1855,
+       "x": 15,
+       "y": 0
+    },
+    "name": "Foster The People - Pseudologia Fantastica",
+    "percent": 0.5,
+    "swallows": [
+       {
+       // "class": "^Clementine$",
+       // "instance": "^clementine$",
+       // "title": "^Foster\\ The\\ People\\ \\-\\ Pseudologia\\ Fantastica$",
+       // "transient_for": "^$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "normal",
+    "current_border_width": 2,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 457,
+       "width": 722,
+       "x": 0,
+       "y": 0
+    },
+    "name": "dragon@scaziber-pc: ~",
+    "percent": 0.5,
+    "swallows": [
+       {
+       // "class": "^Gnome\\-terminal$",
+       // "instance": "^gnome\\-terminal\\-server$",
+       // "title": "^dragon\\@scaziber\\-pc\\:\\ \\~$",
+       // "transient_for": "^$",
+       // "window_role": "^gnome\\-terminal\\-window\\-4cda71a1\\-b9b4\\-4cc3\\-b2ca\\-9a4bb3956249$"
+       }
+    ],
+    "type": "con"
+}
+

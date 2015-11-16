@@ -1,0 +1,11 @@
+xmodmap -e "clear Mod1"
+xmodmap -e "clear Mod2"
+xmodmap -e "clear Mod3"
+xmodmap -e "clear Mod4"
+xmodmap -e "clear Mod5"
+
+xmodmap -e "add Mod1 = Alt_L Alt_R Meta_L"
+xmodmap -e "add Mod2 = Num_Lock"
+xmodmap -e "add Mod3 = Hyper_L"
+xmodmap -e "add Mod4 = Super_L Super_R"
+xmodmap -e "add Mod5 = ISO_Level3_Shift Mode_switch"
