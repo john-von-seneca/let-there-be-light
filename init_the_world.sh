@@ -62,6 +62,28 @@ fi
 echo "creating symlink $LINK_TIG ... "
 ln -s $HOME_LIGHT/tigrc $LINK_TIG
 
+# symlink conkyrc
+LINK_CONKY="$HOME/.conkyrc"
+if [ -L "$LINK_CONKY" ]; then
+  echo "$LINK_CONKY found... backing it up"
+  TIME_NOW=`date +%F.%H%M`
+  mv $LINK_CONKY $LINK_CONKY.bkp.$TIME_NOW
+fi
+echo "creating symlink $LINK_CONKY ... "
+ln -s $HOME_LIGHT/conkyrc $LINK_CONKY
+
+# symlink weather_machi.sh
+LINK_WTHR="$HOME/.weather"
+if [ -L "$LINK_WTHR" ]; then
+  echo "$LINK_WTHR found... backing it up"
+  TIME_NOW=`date +%F.%H%M`
+  mv $LINK_WTHR $LINK_WTHR.bkp.$TIME_NOW
+fi
+echo "creating symlink $LINK_WTHR ... "
+ln -s $HOME_LIGHT/weather_machi.sh $LINK_WTHR
+
+
+
 
 
 
