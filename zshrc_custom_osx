@@ -1,5 +1,5 @@
 # required for homebrew
-export HOMEBREW_GITHUB_API_TOKEN=13ae730a736c7548d3bd6af292746fbbafe9bfb7
+export HOMEBREW_GITHUB_API_TOKEN=f2d6bfecef65542251c15b4d93cbdbacd85f4efb
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
