@@ -174,8 +174,45 @@ bar {
 		statusline #ADD8E6
 	}
 	status_command conky -c ~/.conkyrc
-	position top
+	position bottom
 	tray_output primary
-	font pango:DejaVu Sans Mono 13
+	font pango:DejaVu Sans Mono 12
 	binding_mode_indicator yes
 }
+
+exec --no-startup-id "sh ~/.i3/auto-start.sh"
+
+## workspace 1
+## clementine
+#exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.i3/workspace-1.json'"
+#exec clementine &
+#
+##sleep 5
+#
+## workspace 2
+## clementine
+#exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/.i3/workspace-2.json'"
+#exec google-chrome-unstable &
+#
+##sleep 10
+#
+## workspace 4
+## emacs + terminal
+#exec --no-startup-id "i3-msg 'workspace 4; append_layout ~/.i3/workspace-4.json'"
+#exec emacs &
+#exec gnome-terminal --title=foremacs &
+#
+##sleep 10
+#
+## workspace 5
+## nautilus
+#exec --no-startup-id "i3-msg 'workspace 5; append_layout ~/.i3/workspace-5.json'"
+#
+## workspace 9
+## nautilus -- desktop window
+#exec --no-startup-id "i3-msg 'workspace 9; append_layout ~/.i3/workspace-9.json'"
+#exec nautilus &
+#
+
+
+

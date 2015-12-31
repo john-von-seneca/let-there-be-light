@@ -7,15 +7,15 @@
        "height": 1035,
        "width": 1916,
        "x": 0,
-       "y": 43
+       "y": 0
     },
-    "name": "Clementine",
+    "name": "Home",
     "percent": 1,
     "swallows": [
        {
-       "class": "^Clementine$"
-       // "instance": "^clementine$",
-       // "title": "^Clementine$",
+       "class": "^Nautilus$"
+       // "instance": "^nautilus$",
+       // "title": "^Home$",
        // "transient_for": "^$"
        }
     ],

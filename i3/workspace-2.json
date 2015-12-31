@@ -1,0 +1,29 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "normal",
+    "current_border_width": 2,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1035,
+       "width": 1916,
+       "x": 2,
+       "y": 18
+    },
+    "name": "(828) Inoreader - YouTube Subscriptions - Google Chrome",
+    "percent": 1,
+    "swallows": [
+       {
+       "class": "^google\\-chrome\\-unstable$"
+       //"class": "^google\\-chrome$"
+       // "instance": "^google\\-chrome\\-unstable\\ \\(\\/home\\/dragon\\/\\.config\\/google\\-chrome\\-unstable\\)$",
+       // "title": "^\\(828\\)\\ Inoreader\\ \\-\\ YouTube\\ Subscriptions\\ \\-\\ Google\\ Chrome$",
+       // "transient_for": "^$",
+       // "window_role": "^browser$"
+       },
+       {
+          "class": "^google\\-chrome$"
+       }
+    ],
+    "type": "con"
+}
+
