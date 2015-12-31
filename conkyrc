@@ -81,16 +81,17 @@ ${if_up wlan0}wlan0 ${addr wlan0} | ${endif}\
 #
 #
 ###	CPU stats
-P ${cpu cpu1}% ${exec sensors | grep -m 1 "Core 0"|awk '{print $3}'} | \
+CPU ${loadavg 1} ${exec sensors | grep -m 1 "Core 0" | sed -n 's/Core 0.*+\(.*\).[0-9]°C.*(high.*/\1°C/p'} | \
+## CPU ${cpu cpu1}% ${exec sensors | grep -m 1 "Core 0"|awk '{print $3}'} | \
 ## CPU ${cpu cpu1}% ${freq_g 1}GHz ${exec sensors | grep -m 1 "Core 0"|awk '{print $3}'} | \
 #
 #
 ###	HDD Temperature
-${exec  netcat localhost 7634 | awk -F'|' '{print "H: "$4"° "$9"° "$14"°"}'} | \
+${exec  netcat localhost 7634 | awk -F'|' '{print "HDD: "$4"° "$9"° "$14"°"}'} | \
 #
 #
 ###	RAM in use
-M ${memperc}% | \
+RAM ${memperc}% | \
 #
 #
 ###	BATT ${battery BAT0} | \
