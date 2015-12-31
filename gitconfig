@@ -5,6 +5,7 @@
     rh = reset HEAD
     ci = commit
     com  = commit
+    cm = commit -m
     df = diff
     s  = status
     st = status
