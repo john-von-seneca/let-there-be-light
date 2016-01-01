@@ -3,14 +3,14 @@
 i3-msg 'workspace 1; append_layout ~/.i3/workspace-1.json'
 clementine &
 
-sleep 5
+sleep 15
 
 # workspace 2
 # clementine
 i3-msg 'workspace 2; append_layout ~/.i3/workspace-2.json'
 google-chrome-unstable &
 
-sleep 10
+sleep 20
 
 # workspace 4
 # emacs + terminal
@@ -18,7 +18,7 @@ i3-msg 'workspace 4; append_layout ~/.i3/workspace-4.json'
 emacs &
 gnome-terminal --title=foremacs &
 
-sleep 10
+sleep 20
 
 # workspace 5
 # terminal
