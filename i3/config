@@ -149,7 +149,7 @@ bindsym Control+$mod+l exec "i3lock -i ~/i3lock-wp-1.png"
 
 #bindsym $mod+Shift+t exec "~/.i3/i3lock-custom.sh"
 #exec xautolock -time 15 -locker "~/.i3/i3lock-custom.sh" & 
-exec xautolock -time 5 -locker "i3lock  -i /home/dragon/i3lock-wp-1.png" & 
+exec xautolock -time 20 -locker "i3lock  -i /home/dragon/i3lock-wp-1.png" & 
 #bindsym $mod+Shift+t exec "i3-nagbar -t warning -m 'you wanna lock and load' -b 'Yes, please' 'i3lock -i /home/dragon/i3lock-wp-1.png'"
 bindsym $mod+Shift+t exec "i3-nagbar -t warning -m 'you wanna lock and load' -b 'Yes, please1' 'i3lock'"
 
