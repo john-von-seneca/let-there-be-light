@@ -22,11 +22,11 @@ sleep 40
 
 # workspace 5
 # terminal
-i3-msg 'workspace 5; exec gnome-terminal'
+i3-msg 'workspace 6; exec gnome-terminal'
 
 # workspace 6
 # nautilus
-i3-msg 'workspace 6; append_layout ~/.i3/workspace-6.json'
+i3-msg 'workspace 0; append_layout ~/.i3/workspace-6.json'
 
 # workspace 9
 # nautilus -- desktop window
@@ -35,4 +35,4 @@ nautilus &
 
 
 
-i3-msg 'workspace 2'
+i3-msg 'workspace 7'
