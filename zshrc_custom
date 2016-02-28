@@ -140,7 +140,8 @@ alias pis="pip3 search"
 alias gc="git clone"
 #alias +="mkdir"
 alias xclip="xclip -selection c"
-alias jref="java -jar ~/neo-human/repos/jabref/build/releases/JabRef-3.2dev.jar"
+#alias jref="java -jar ~/neo-human/repos/jabref/build/releases/JabRef-3.2dev.jar"
+alias jref="java -jar ~/neo-human/repos/jabref/build/releases/JabRef-3.3dev.jar"
 alias urldecode='python -c "import sys, urllib as ul; \
     print ul.unquote_plus(sys.argv[1])"'
 #####################################################
