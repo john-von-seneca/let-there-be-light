@@ -137,7 +137,9 @@ fi
 alias pip_upgrade_all="pip3 list | cut -d' ' -f1 -  | xargs -I packages pip3 install --user --upgrade packages"
 alias pi="pip3 install --user --upgrade"
 alias pis="pip3 search"
-alias gc="git clone"
+alias gc="~/neo-human/repos/let-there-be-light/gc.sh "
+#gc () { cd ~/neo-human/repos; git clone $1}
+
 #alias +="mkdir"
 alias xclip="xclip -selection c"
 #alias jref="java -jar ~/neo-human/repos/jabref/build/releases/JabRef-3.2dev.jar"
