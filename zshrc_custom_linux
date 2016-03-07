@@ -22,6 +22,7 @@ export DEFAULT_USER=f
 export CUDA_ROOT=/usr/local/cuda-7.0
 export LD_LIBRARY_PATH=${CUDA_ROOT}/lib64:$LD_LIBRARY_PATH
 PATH=${CUDA_ROOT}/bin:${PATH}
+PATH=$HOME/.gem/ruby/1.9.1/bin:${PATH}
 export PATH
 # cuda stuff -- stop
 
