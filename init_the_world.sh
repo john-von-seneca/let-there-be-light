@@ -94,8 +94,15 @@ echo "creating symlink $LINK_I3DIR ... "
 ln -s $HOME_LIGHT/.i3 $LINK_I3DIR
 
 
+## ruby helpers
+gc git@github.com:rbenv/rbenv.git
+ln -s ~/neo-human/repos/rbenv/ ~/.rbenv
 
+gc git@github.com:rbenv/ruby-build.git
+mkdir -p ~/.rbenv/plugins/
+ln -s ~/neo-human/repos/ruby-build/ ~/.rbenv/plugins/
 
+ln -s $HOME_LIGHT/irbrc ~/.irbrc
 
 
 
