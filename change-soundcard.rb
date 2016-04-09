@@ -28,6 +28,7 @@ sink_inputs.each do |sink_input|
 	ix_sink = sink_input.split(":").last
 	puts("pacmd move-sink-input #{ix_sink} #{ix_sink_out}")
 	`pacmd move-sink-input #{ix_sink} #{ix_sink_out}` 
+	`pacmd set-default-sink #{ix_sink_out}` 
 end
 
 puts(soundcards())
