@@ -136,6 +136,7 @@ fi
 
 alias pip_upgrade_all="pip3 list | cut -d' ' -f1 -  | xargs -I packages pip3 install --user --upgrade packages"
 alias pi="pip3 install --user --upgrade"
+alias pi2="pip2 install --user --upgrade"
 alias pis="pip3 search"
 alias gc="~/neo-human/repos/let-there-be-light/gc.sh "
 #gc () { cd ~/neo-human/repos; git clone $1}
@@ -147,6 +148,10 @@ alias jref="java -jar ~/neo-human/repos/jabref/build/releases/JabRef-3.3dev.jar"
 alias urldecode='python -c "import sys, urllib as ul; \
     print ul.unquote_plus(sys.argv[1])"'
 gitreadme() { less ~/neo-human/repos/$1/README.md}
+alias mlcd="cd ~/neo-human/programs/ml/ml-and-what-not"
+alias mlstart="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/ml/ml-and-what-not --port=8888"
+alias pncd="cd ~/neo-human/programs/pnotes"
+alias pnstart="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/pnotes --port=8889"
 #####################################################
 ################  ALIASES - END #####################
 #####################################################
@@ -163,5 +168,7 @@ fi
 #fortune -a | cowsay
 fortune -a | fmt -80 -s | $($CMD_SHUF -n 1 -e cowsay cowthink) -$($CMD_SHUF -n 1 -e b d g p s t w y) -f $($CMD_SHUF -n 1 -e $(cowsay -l | tail -n +2)) -n
 
-
+export PATH="$HOME/.rbenv/rbenv/bin:$PATH"
+export PATH="$HOME/.gem/ruby/2.2.0/bin:$PATH"
+eval "$(rbenv init -)"
 
