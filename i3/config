@@ -154,8 +154,14 @@ exec xautolock -time 20 -locker "i3lock  -i /home/dragon/i3lock-wp-1.png" &
 bindsym $mod+Shift+t exec "i3-nagbar -t warning -m 'you wanna lock and load' -b 'Yes, please1' 'i3lock'"
 
 
-bindsym XF86AudioLowerVolume exec amixer -q set Master 5-
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 5+
+# bindsym XF86AudioLowerVolume exec amixer -q set Master 5-
+#bindsym XF86AudioRaiseVolume exec amixer -q set Master 5+
+bindsym XF86AudioLowerVolume exec pactl -- set-sink-volume `pactl list sinks | grep -B 1 RUNNING | head -n 1 | cut -d# -f2` -10%
+bindsym XF86AudioRaiseVolume exec pactl -- set-sink-volume `pactl list sinks | grep -B 1 RUNNING | head -n 1 | cut -d# -f2` +10%
+
+
+# bindsym XF86AudioLowerVolume exec "ruby /home/dragon/neo-human/repos/let-there-be-light/change-volume.rb -"
+# bindsym XF86AudioRaiseVolume exec "ruby ~/neo-human/repos/let-there-be-light/change-volume.rb +"
 bindsym XF86AudioMute exec $(amixer get Master | grep off > /dev/null && amixer -q set Master unmute) || amixer -q set Master mute
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -181,38 +187,3 @@ bar {
 }
 
 exec --no-startup-id "sh ~/.i3/auto-start.sh"
-
-## workspace 1
-## clementine
-#exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.i3/workspace-1.json'"
-#exec clementine &
-#
-##sleep 5
-#
-## workspace 2
-## clementine
-#exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/.i3/workspace-2.json'"
-#exec google-chrome-unstable &
-#
-##sleep 10
-#
-## workspace 4
-## emacs + terminal
-#exec --no-startup-id "i3-msg 'workspace 4; append_layout ~/.i3/workspace-4.json'"
-#exec emacs &
-#exec gnome-terminal --title=foremacs &
-#
-##sleep 10
-#
-## workspace 5
-## nautilus
-#exec --no-startup-id "i3-msg 'workspace 5; append_layout ~/.i3/workspace-5.json'"
-#
-## workspace 9
-## nautilus -- desktop window
-#exec --no-startup-id "i3-msg 'workspace 9; append_layout ~/.i3/workspace-9.json'"
-#exec nautilus &
-#
-
-
-

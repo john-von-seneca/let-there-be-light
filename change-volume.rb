@@ -12,6 +12,7 @@ else
 	raise("what the fuck is this #{ARGV[0]}")
 end
 vol = vol.to_i
+# puts("#{active_sink[:index]} #{vol}")
+# `pacmd set-sink-volume #{active_sink[:index]} #{vol}`
+# puts(get_active_sink_info())
 puts("#{active_sink[:index]} #{vol}")
-`pacmd set-sink-volume #{active_sink[:index]} #{vol}`
-puts(get_active_sink_info())
