@@ -109,4 +109,7 @@ ${exec sh ~/.weather} | \
 #
 ##	Volume %
 #Vol: ${mixer}
-V ${exec pactl list sinks | grep "Volume: 0"| tail -n 1 | awk '{print substr($3, 1, index($3, "%") - 1)}'}%
+#V ${exec pactl list sinks | grep "Volume: 0"| tail -n 1 | awk '{print substr($3, 1, index($3, "%") - 1)}'}%
+#V ${exec ruby /home/dragon/neo-human/repos/let-there-be-light/get-volume.rb}%
+V ${exec pactl list sinks | awk '/RUNNING/{y=1;next}y' | ag "Volume: 0" | head -n 1 | awk '{print substr($3, 1, index($3, "%") - 1)}'}%
+
