@@ -182,7 +182,7 @@ bar {
 	status_command conky -c ~/.conkyrc
 	position bottom
 	tray_output primary
-	font pango:DejaVu Sans Mono 12
+	font pango:DejaVu Sans Mono 10
 	binding_mode_indicator yes
 }
 
