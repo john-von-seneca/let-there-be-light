@@ -152,6 +152,8 @@ alias mlcd="cd ~/neo-human/programs/ml/ml-and-what-not"
 alias mlstart="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/ml/ml-and-what-not --port=8888"
 alias pncd="cd ~/neo-human/programs/pnotes"
 alias pnstart="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/pnotes --port=8889"
+alias h2cd="cd ~/neo-human/programs/vanity-fair/hydrogen"
+alias h2start="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/vanity-fair/hydrogen/analysis --port=8890"
 #####################################################
 ################  ALIASES - END #####################
 #####################################################
