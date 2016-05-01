@@ -1,6 +1,6 @@
 ### Conky configuration file
-## Output is printed to the console -> i3bar
-# Modified: 27.11.2011 - mseed : http://www.fastlinux.eu
+### Output is printed to the console -> i3bar
+### Modified: 27.11.2011 - mseed : http://www.fastlinux.eu
 
 ### 
 # use_xft yes
@@ -87,7 +87,7 @@ CPU ${loadavg 1} ${exec sensors | grep -m 1 "Core 0" | sed -n 's/Core 0.*+\(.*\)
 #
 #
 ###	HDD Temperature
-${exec  netcat localhost 7634 | awk -F'|' '{print "HDD: "$4"° "$9"° "$14"°"}'} | \
+${exec  netcat localhost 7634 | awk -F'|' '{print "HDD: "$4"° "$9"° "$14"° " $19"°"}'} | \
 #
 #
 ###	RAM in use
@@ -111,5 +111,5 @@ ${exec sh ~/.weather} | \
 #Vol: ${mixer}
 #V ${exec pactl list sinks | grep "Volume: 0"| tail -n 1 | awk '{print substr($3, 1, index($3, "%") - 1)}'}%
 #V ${exec ruby /home/dragon/neo-human/repos/let-there-be-light/get-volume.rb}%
-V ${exec pactl list sinks | awk '/RUNNING/{y=1;next}y' | ag "Volume: 0" | head -n 1 | awk '{print substr($3, 1, index($3, "%") - 1)}'}%
+V ${exec pactl list sinks | awk '/RUNNING/{y=1;next}y' | ag "Volume: front-left" | head -n 1 | awk '{ix_percent=index($5,"%")}{print substr($5,0,ix_percent)}'}
 
