@@ -13,10 +13,7 @@
     "percent": 0.6,
     "swallows": [
        {
-       "class": "^Emacs$"
-       //"instance": "^emacs$",
-       //"title": "^emacs\\ Prelude\\ \\-\\ \\*scratch\\*$",
-       //"transient_for": "^$"
+       "class": "^Emacs24$"
        }
     ],
     "type": "con"
@@ -36,11 +33,7 @@
     "percent": 0.4,
     "swallows": [
        {
-       "class": "^Gnome\\-terminal$",
-       //"instance": "^foremacs$"
-       "title": "^foremacs$"
-       //"transient_for": "^$",
-       //"window_role": "^gnome\\-terminal\\-window\\-30094\\-\\-426116567\\-1451555427$"
+       "class": "^Gnome\\-terminal$"
        }
     ],
     "type": "con"
