@@ -19,6 +19,7 @@ packages = [["automake", "axel"],
  ["libavcodec-dev", "libavformat-dev", "libboost-all-dev", "libdc1394-22-dev", "libeigen3-dev", "libfreetype6-dev", "libgtk2.0-dev"],
  ["libjasper-dev", "libjpeg-dev", "libpcre3", "libpython2.7", "libpython2.7", "libpython2.7-dev", "libpython2.7-dev", "libpython2.7-stdlib", "libpython2.7-stdlib", "libqt4-opengl", "libqt4-opengl", "libqt4-opengl", "libqt4-opengl-dev", "libqt4-opengl-dev", "libqt5opengl5-dev", "libreadline-dev", "libswscale-dev", "libtbb-dev", "libtbb2", "libzmq3-dev"],
  ["lm-sensors"].
+ ["lfm","mc"],
  ["neovim", "nmap", "ntp", "ntp"],
  ["okular", "okular", "okular", "okular", "okular-extra-backends", "okular-extra-backends"],
  ["pdmenu", "pkg-config", "psensor", "psensor", "python-pip", "python2.7", "python3-dev", "python3-dev"], 

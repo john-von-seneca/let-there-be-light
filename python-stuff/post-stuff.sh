@@ -9,4 +9,4 @@ cp -R nbextensions ~/.local/share/jupyter
 cp -R templates ~/.local/share/jupyter
 cp -R extensions ~/.local/share/jupyter
 
-
+pi numpy scipy notebook jupyter matplotlib cairocffi
