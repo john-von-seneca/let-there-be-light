@@ -39,6 +39,10 @@ bindsym $mod+d exec dmenu_run
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# navigate to prev/next workspace
+bindsym $mod+Control+Left workspace prev
+bindsym $mod+Control+Right workspace next
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
