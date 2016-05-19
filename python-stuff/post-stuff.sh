@@ -10,3 +10,6 @@ cp -R templates ~/.local/share/jupyter
 cp -R extensions ~/.local/share/jupyter
 
 pi numpy scipy notebook jupyter matplotlib cairocffi
+
+####
+mv ~/.local/lib/python3.5/site-packages/notebook/static/components/MathJax ~/.local/lib/python3.5/site-packages/notebook/static/components/MathJax.bkp.1; ln -s ~/neo-human/repos/MathJax ~/.local/lib/python3.5/site-packages/notebook/static/components
