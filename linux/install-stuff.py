@@ -29,7 +29,23 @@ packages = [["automake", "axel"],
  ["valgrind", "variety", "vim-gtk", "vim-rails", "vlc"],
  ["xclip", "xkeycaps", "xkeycaps"], 
  ["zeal", "zsh"],
- ["mysql-server mysql-client libmysqlclient-dev libsqlite3-dev"]
+ ["mysql-server mysql-client libmysqlclient-dev libsqlite3-dev"],
+ ['spotify-client', 'spotify-client-qt', 'terminator',
+  'synapse', 'banshee',
+    'banshee-extension-albumartwriter',
+    'banshee-extension-ampache',
+    'banshee-extension-awn',
+       'banshee-extension-coverwallpaper',
+        'banshee-extension-foldersync',
+         'banshee-extension-lyrics',
+          'banshee-extension-duplicatesongdetector',
+           'banshee-extension-lcd',
+            'deluge',
+             'deluge-console',
+              'deluge-gtk',
+               'deluge-torrent',
+                'deluge-web',
+                 'deluge-webui']
  ]
 
 def change_dir(work):

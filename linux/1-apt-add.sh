@@ -17,3 +17,33 @@ sudo apt-add-repository ppa:team-xbmc/ppa
 # variety
 sudo add-apt-repository ppa:peterlevi/ppa
 # emacs
+
+# subl
+sudo add-apt-repository ppa:webupd8team/sublime-text-3
+
+# deadbeef music player
+sudo add-apt-repository ppa:starws-box/deadbeef-player
+
+#
+sudo add-apt-repository ppa:gnome-terminator/ppa
+
+
+#
+sudo add-apt-repository ppa:synapse-core/ppa
+
+
+#
+sudo add-apt-repository ppa:banshee-team/banshee-unstable
+
+
+#
+sudo add-apt-repository ppa:deluge-team/ppa
+
+
+#
+sudo add-apt-repository
+
+#
+sudo add-apt-repository
+
+
