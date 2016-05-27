@@ -108,6 +108,18 @@ fi
 echo "creating symlink $LINK_I3DIR ... "
 ln -s $HOME_LIGHT/.i3 $LINK_I3DIR
 
+# symlink R environ
+LINK_RENV="$HOME/.Renviron"
+if [ -L "$LINK_RENV" ]; then
+  echo "$LINK_RENV found... backing it up"
+  TIME_NOW=`date +%F.%H%M`
+  mv $LINK_RENV $LINK_RENV.bkp.$TIME_NOW
+fi
+echo "creating symlink $LINK_RENV ... "
+ln -s $HOME_LIGHT/Renviron $LINK_RENV
+
+
+
 
 source $HOME/.zshrc
 
