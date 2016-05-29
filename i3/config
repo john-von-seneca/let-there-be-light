@@ -184,7 +184,7 @@ bar {
 		statusline #ADD8E6
 	}
 	status_command conky -c ~/.conkyrc
-	position bottom
+	position top
 	tray_output primary
 	font pango:DejaVu Sans Mono 10
 	binding_mode_indicator yes
