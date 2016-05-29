@@ -29,7 +29,7 @@ export PATH
 alias in="sudo apt-fast -y install"
 alias se="sudo apt-cache search"
 alias yy="sudo apt-get update; sudo apt-fast -y upgrade"
-alias idea="/media/sulley/home/all-apps/programming/idea-IC-143.1184.17/bin/idea.sh"
+alias idea="/media/sulley/home/all-apps/programming/java/idea-IC-143.1184.17/bin/idea.sh"
 alias bandwidth-usage="vnstat -i eno1"
 
 
