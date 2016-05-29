@@ -1,2 +1,3 @@
 cd ~/neo-human/repos
-git clone $1
+dirgitcurr=`echo $1 | sed 's/.*:\(.*\).git/\1/'`
+git clone $1 $dirgitcurr
