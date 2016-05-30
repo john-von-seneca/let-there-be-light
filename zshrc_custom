@@ -167,7 +167,31 @@ fi
 #fortune -a | cowsay
 fortune -a | fmt -80 -s | $($CMD_SHUF -n 1 -e cowsay cowthink) -$($CMD_SHUF -n 1 -e b d g p s t w y) -f $($CMD_SHUF -n 1 -e $(cowsay -l | tail -n +2)) -n
 
+
+####################################################
+##################  RUBY STUFF #####################
+####################################################
 export PATH="$HOME/.rbenv/rbenv/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.2.0/bin:$PATH"
 eval "$(rbenv init -)"
+####################################################
+
+
+####################################################
+##################  NPM - STUFF ####################
+####################################################
+# NPM packages in homedir
+export NPM_PACKAGES="$HOME/.npm-packages"
+
+# Tell our environment about user-installed node tools
+export PATH="$NPM_PACKAGES/bin:$PATH"
+# Unset manpath so we can inherit from /etc/manpath via the `manpath` command
+unset MANPATH  # delete if you already modified MANPATH elsewhere in your configuration
+export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+
+# Tell Node about these packages
+export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+####################################################
+
+
 
