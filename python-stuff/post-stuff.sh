@@ -16,6 +16,7 @@ pi jupyter-js-widgets-nbextension
 jupyter nbextension enable --py --sys-prefix widgetsnbextension
 
 pi sklearn sklearn-pandas sklearn-extensions
+pi psutil 
 
 ####
 mv ~/.local/lib/python3.5/site-packages/notebook/static/components/MathJax ~/.local/lib/python3.5/site-packages/notebook/static/components/MathJax.bkp.1; ln -s ~/neo-human/repos/MathJax ~/.local/lib/python3.5/site-packages/notebook/static/components
