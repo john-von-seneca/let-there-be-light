@@ -1,6 +1,10 @@
 *~
 ssh-key/*
 
+.RData
+.Rhistory
+playground.sh
+
 # Tags et al
 GPATH
 GTAGS
