@@ -118,6 +118,23 @@ fi
 echo "creating symlink $LINK_RENV ... "
 ln -s $HOME_LIGHT/Renviron $LINK_RENV
 
+# args: (<original file relative to this dir>, <link file> )
+LinkFile () {
+	echo "LinkFile called with args: $1, $2"
+	LINK_SRC=$1
+	LINK_DST=$2
+	if [ -L "$LINK_DST" ]; then
+		echo "$LINK_DST found... backing it up"
+		TIME_NOW=`date +%F.%H%M`
+		mv $LINK_DST $LINK_DST.bkp.$TIME_NOW
+	fi
+	echo "creating symlink $LINK_DST ... "
+	ln -sr $LINK_SRC $LINK_DST
+}
+
+LinkFile git-stuff/gitconfig $HOME/.gitconfig
+
+
 
 
 
