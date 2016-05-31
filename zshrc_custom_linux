@@ -26,6 +26,8 @@ PATH=$HOME/.gem/ruby/1.9.1/bin:${PATH}
 export PATH
 # cuda stuff -- stop
 
+export JAVA_HOME=/usr/lib/jvm/default-java/jre/
+
 alias in="sudo apt-fast -y install"
 alias se="sudo apt-cache search"
 alias yy="sudo apt-get update; sudo apt-fast -y upgrade"
