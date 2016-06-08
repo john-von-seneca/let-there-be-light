@@ -1,5 +1,8 @@
 
-load 'soundcards-info.rb'
+
+dir_name = File.expand_path(File.join(File.dirname(__FILE__)))
+
+load dir_name + '/soundcards-info.rb'
 sound_cards = soundcards()
 
 # if arg is not number, then it gotta be "speaker/monitor"
