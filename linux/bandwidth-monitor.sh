@@ -9,7 +9,7 @@ use warnings;
 use POSIX qw(strftime);
 use Time::HiRes qw(gettimeofday usleep);
 
-my $dev = @ARGV ? shift : 'eth0';
+my $dev = @ARGV ? shift : `ls /sys/class/net | ag 'e' | head -n 1 | tr -d '\n'`;
 my $dir = "/sys/class/net/$dev/statistics";
 my %stats = do {
     opendir +(my $dh), $dir;

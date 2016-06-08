@@ -23,7 +23,7 @@ double_buffer no
 background no
 
 ## Update interval in seconds
-update_interval 2.0
+update_interval 5.0
 
 ## This is the number of times Conky will update before quitting.
 ## Set to zero to run forever.
@@ -73,7 +73,12 @@ TEXT
 #
 #
 ###	Ethernet status
-${if_up eth0}E:up | ${endif}\
+${if_up eno1}E:up | ${endif} \
+ip ${exec ifconfig eno1 | ag 'inet add' | sed 's/.*addr:[0-9]*.[0-9]*.\([0-9][0-9]*.[0-9][0-9]*\).*/\1/'} | \
+d ${downspeed eno1}/${totaldown eno1} u ${upspeed eno1}/${totalup eno1} | \
+## ip ${addr eno1} | \
+## ${font size=7}${color slate grey}Network $hr${color }${font } | \
+## d ${downspeedf eno1} | \
 ## ${if_up eth0}eth0 ${addr eth0} | ${endif}\
 #
 ###	Wireless status
@@ -81,7 +86,7 @@ ${if_up wlan0}wlan0 ${addr wlan0} | ${endif}\
 #
 #
 ###	CPU stats
-CPU ${loadavg 1} ${exec sensors | grep -m 1 "Core 0" | sed -n 's/Core 0.*+\(.*\).[0-9]°C.*(high.*/\1°C/p'} | \
+CPU $cpu% ${loadavg 1} ${exec sensors | grep -m 1 "Core 0" | sed -n 's/Core 0.*+\(.*\).[0-9]°C.*(high.*/\1°C/p'} | \
 ## CPU ${cpu cpu1}% ${exec sensors | grep -m 1 "Core 0"|awk '{print $3}'} | \
 ## CPU ${cpu cpu1}% ${freq_g 1}GHz ${exec sensors | grep -m 1 "Core 0"|awk '{print $3}'} | \
 #
