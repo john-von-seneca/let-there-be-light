@@ -32,7 +32,7 @@ sudo add-apt-repository ppa:gnome-terminator/ppa
 sudo add-apt-repository ppa:synapse-core/ppa
 
 
-#
+# banshee
 sudo add-apt-repository ppa:banshee-team/banshee-unstable
 
 
