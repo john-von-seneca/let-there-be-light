@@ -149,7 +149,9 @@ alias h2cd="cd ~/neo-human/programs/vanity-fair/hydrogen"
 alias h2start="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/vanity-fair/hydrogen/analysis --port=8890"
 
 alias vfh2="cd ~/neo-human/programs/vanity-fair/hydrogen"
+alias vfh2start="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/vanity-fair/hydrogen/analysis --port=8891"
 alias vfhe="cd ~/neo-human/programs/vanity-fair/helium"
+alias lightcd="cd ~/neo-human/repos/let-there-be-light"
 
 alias bi="bundle install"
 #####################################################
