@@ -1,0 +1,23 @@
+# paths to projects 
+#  - must be absolute 
+#  - must not contain symlinks
+#  - must not end with "/"
+# run `pwd -P` in the project root to get the correct value
+# PROJ_A="/path/to/project/a"
+# PROJ_B="/path/to/project/b"
+
+proj_vfh2="/home/dragon/neo-human/programs/vanity-fair/hydrogen"
+
+local_aliases () {
+	case $(pwd -P) in 
+		( $proj_vfh2 | $proj_vfh2/* )
+			alias mc1="make clean"
+		;;
+		#( $PROJ_B | $PROJ_B/* ) 
+		#	 # Put command(s) needed to push B here
+		#;;
+		( * )
+			# echo "You are not in a project directory"
+		;;
+	esac
+}

@@ -48,7 +48,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting)
+plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting autojump gnu-utils)
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -194,6 +194,26 @@ export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 # Tell Node about these packages
 export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+####################################################
+
+
+####################################################
+################  THE FUCK #########################
+####################################################
+eval $(thefuck --alias)
+####################################################
+
+
+source /usr/share/autojump/autojump.zsh
+
+####################################################
+################ DIR ALIASES #######################
+####################################################
+function chpwd() {
+    emulate -L zsh
+    local_aliases
+}
+source ~/neo-human/repos/let-there-be-light/zshrc_directory_aliases
 ####################################################
 
 
