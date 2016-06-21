@@ -214,6 +214,7 @@ function chpwd() {
     local_aliases
 }
 source ~/neo-human/repos/let-there-be-light/zshrc_directory_aliases
+local_aliases
 ####################################################
 
 

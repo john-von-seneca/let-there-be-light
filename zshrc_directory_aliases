@@ -6,12 +6,14 @@
 # PROJ_A="/path/to/project/a"
 # PROJ_B="/path/to/project/b"
 
-proj_vfh2="/home/dragon/neo-human/programs/vanity-fair/hydrogen"
+proj_light="$HOME/neo-human/repos/let-there-be-light"
+proj_vfh2="$HOME/neo-human/programs/vanity-fair/hydrogen"
+dir_aliases="$proj_light/zsh-stuff/dir-aliases"
 
 local_aliases () {
 	case $(pwd -P) in 
 		( $proj_vfh2 | $proj_vfh2/* )
-			alias mc1="make clean"
+			source $dir_aliases/vfh2.aliases
 		;;
 		#( $PROJ_B | $PROJ_B/* ) 
 		#	 # Put command(s) needed to push B here
