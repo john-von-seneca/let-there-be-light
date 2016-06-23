@@ -34,6 +34,7 @@ alias yy="sudo apt-get update; sudo apt-fast -y upgrade"
 alias idea="/media/sulley/home/all-apps/programming/java/idea-IC-143.1184.17/bin/idea.sh"
 alias bandwidth-usage="vnstat -i eno1"
 alias cycle-soundcards="ruby ~/neo-human/repos/let-there-be-light/change-soundcard.rb cycle"
+alias process-moozik-dir="ruby ~/neo-human/repos/let-there-be-light/process-music-dir.rb"
 
 
 PATH=~/.local/bin:${PATH}
