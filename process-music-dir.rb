@@ -9,26 +9,35 @@ puts(">> processing cover.jpg")
 puts(">> create meta dir")
 `mkdir -p meta` unless test
 
-puts(">> mv files from Data to meta")
-if(File.directory?('Data'))
-	`mv Data/* meta/` unless test
-	`rm -rf Data` unless test
+# to meta folder
+%w{Data}.each do |meta_src|
+	if(File.directory?(meta_src))
+		puts(">> mv files from #{meta_src} to meta")
+		`mv #{meta_src}/* meta/` unless test
+		`rm -rf #{meta_src}` unless test
+	end
 end
 
-if(File.directory?('scan'))
-	puts(">> mv files from scan to art")
-	`mv scan/* art/` unless test
-	`rm -rf scan` unless test
+# to art folder
+%w{scan}.each do |art_src|
+	if(File.directory?(art_src))
+		puts(">> mv files from #{art_src} to art")
+		`mv #{art_src}/* art/` unless test
+		`rm -rf #{art_src}` unless test
+	end
 end
-
 
 # moving files to meta
 %w{log cue pdf txt url}.each do |file_ext|
 	puts(">> mv #{file_ext} files ... ")
-	`mv *#{file_ext} meta/` unless test
+	`mv *.#{file_ext} meta/` unless test
 end
 
-puts(">> rm playlist files ... ")
-`rm -f *m3u` unless test
+# removing extraneous files
+%w{m3u}.each do |file_ext|
+	puts(">> rm #{file_ext} files ... ")
+	`rm -f *.#{file_ext}` unless test
+end
+
 
 
