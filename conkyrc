@@ -92,7 +92,7 @@ CPU $cpu% ${loadavg 1} ${exec sensors | grep -m 1 "Core 0" | sed -n 's/Core 0.*+
 #
 #
 ###	HDD Temperature
-${exec  netcat localhost 7634 | awk -F'|' '{print "HDD: "$4"° "$9"° "$14"° " $19"°"}'} | \
+${exec  netcat localhost 7634 | awk -F'|' '{print "HDD: "$4"° "$9"° "$14"° "}'} | \
 #
 #
 ###	RAM in use
