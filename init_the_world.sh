@@ -3,8 +3,9 @@
 ###ln -s $PWD/gitconfig ~/.gitconfig
 ###
 NEODIR="$HOME/neo-human"
-HOME_DIR="$NEODIR/repos/let-there-be-light"
-REPOSDIR="$NEODIR/repos"
+VF_DIR="$NEODIR/programs/vanity-fair"
+HOME_DIR="$VF_DIR/let-there-be-light"
+
 ###
 #### create github projects directory
 ###if [ -d $GITREPOS ]; then
