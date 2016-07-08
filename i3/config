@@ -10,7 +10,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 #exec_always ~/.i3/keybindings.sh
-exec alway xmodmap ~/.Xmodmap
+exec always xmodmap ~/.Xmodmap
 set $mod Mod3
 
 # Font for window titles. Will also be used by the bar unless a different font
