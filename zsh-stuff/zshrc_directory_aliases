@@ -1,0 +1,25 @@
+# paths to projects 
+#  - must be absolute 
+#  - must not contain symlinks
+#  - must not end with "/"
+# run `pwd -P` in the project root to get the correct value
+# PROJ_A="/path/to/project/a"
+# PROJ_B="/path/to/project/b"
+
+proj_light="$HOME/neo-human/repos/let-there-be-light"
+proj_vfh2="$HOME/neo-human/programs/vanity-fair/hydrogen"
+dir_aliases="$proj_light/zsh-stuff/dir-aliases"
+
+local_aliases () {
+	case $(pwd -P) in 
+		( $proj_vfh2 | $proj_vfh2/* )
+			source $dir_aliases/vfh2.aliases
+		;;
+		#( $PROJ_B | $PROJ_B/* ) 
+		#	 # Put command(s) needed to push B here
+		#;;
+		( * )
+			# echo "You are not in a project directory"
+		;;
+	esac
+}

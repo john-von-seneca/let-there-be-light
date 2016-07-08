@@ -1,0 +1,6 @@
+cat(".Rprofile: Setting India repositoryn")
+r = getOption("repos") # hard code the UK repo for CRAN
+#r["CRAN"] = "http://cran.uk.r-project.org"
+r["CRAN"] = "http://ftp.iitm.ac.in/cran/"
+options(repos = r)
+rm(r)

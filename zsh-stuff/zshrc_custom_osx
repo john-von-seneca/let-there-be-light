@@ -1,0 +1,35 @@
+# export MANPATH="/usr/local/man:$MANPATH"
+
+### PATH
+
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
+# Added by ~/.emacs.d/install.sh
+export PATH=$HOME/.cask/bin:$PATH
+
+# for rbenv/ruby
+export PATH=$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH
+
+# for python --user
+export PATH=$HOME/Library/Python/3.5/bin:$PATH
+
+# for tex
+export PATH=/usr/texbin:$PATH
+# Add GHC 7.10.2 to the PATH, via https://ghcformacosx.github.io/
+export GHC_DOT_APP="/Applications/ghc-7.10.2.app"
+if [ -d "$GHC_DOT_APP" ]; then
+  export PATH="${HOME}/.local/bin:${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
+fi
+
+### PKG-CONFIG
+# from https://twdkz.wordpress.com/2015/02/25/haskell-on-yosemite-osx-10-10/
+# this is for xquartz
+# later steps in the build processes need to find libraries
+# like xcb-shm via package config. Tell pkg-config
+# where they are.
+export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig
+
+
+### autojump
+## brew install autojump
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh

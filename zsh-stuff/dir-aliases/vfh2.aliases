@@ -3,3 +3,7 @@ alias mw="rm -f welcome; make -j7 welcome"
 alias rw="./welcome"
 alias vw="valgrind --leak-check=full --leak-resolution=high  --tool=memcheck --show-reachable=no --show-leak-kinds=all ./welcome"
 alias cw="valgrind --tool=callgrind ./welcome"
+
+alias mp="rm -f welcome; make -j7 playground"
+alias rp="./playground"
+

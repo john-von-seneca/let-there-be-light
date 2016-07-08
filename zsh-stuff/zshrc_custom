@@ -1,0 +1,224 @@
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="robbyrussell"
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting autojump gnu-utils)
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+
+
+#######################################################
+################## ANTIGEN ############################
+#######################################################
+source ~/neo-human/repos/antigen/antigen.zsh
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundles <<EOBUNDLES
+EOBUNDLES
+antigen bundle git
+antigen bundle heroku
+antigen bundle pip
+antigen bundle lein
+antigen bundle command-not-found
+
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Load the theme.
+antigen theme robbyrussell
+
+# Tell antigen that you're done.
+antigen apply
+######################################################
+################## ANTIGEN -- END ####################
+######################################################
+
+
+# for suppressing R lang warnings
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+
+
+if [[ "$OSTYPE" = "linux-gnu" ]]; then
+	#echo "linux-gnu"
+	source $SCRIPT_DIR/zshrc_custom_linux
+	#echo "linux done baby"
+elif [[ "$OSTYPE" = "darwin"* ]]; then
+    #echo "osx"
+	source $SCRIPT_DIR/zshrc_custom_osx
+elif [[ "$OSTYPE" = "cygwin" ]]; then
+        echo "OS TYPE:: cygwin"
+elif [[ "$OSTYPE" = "msys" ]]; then
+        echo "OS TYPE:: msys"
+elif [[ "$OSTYPE" = "win32" ]]; then
+        echo "OS TYPE:: win32"
+elif [[ "$OSTYPE" = "freebsd"* ]]; then
+        echo "OS TYPE:: freebsd"
+else
+        echo "OS TYPE:: unknown"
+fi
+
+#####################################################
+###################  ALIASES  #######################
+#####################################################
+
+alias pip_upgrade_all="pip3 list | cut -d' ' -f1 -  | xargs -I packages pip3 install --user --upgrade packages"
+alias pi="pip3 install --user --upgrade"
+alias pi2="pip2 install --user --upgrade"
+alias pis="pip3 search"
+alias gc="$SCRIPT_DIR/../git-stuff/gc.sh "
+#gc () { cd ~/neo-human/repos; git clone $1}
+
+#alias +="mkdir"
+alias xclip="xclip -selection c"
+#alias jref="java -jar ~/neo-human/repos/jabref/build/releases/JabRef-3.2dev.jar"
+#alias jref="java -jar ~/neo-human/repos/jabref/build/releases/JabRef-3.3dev.jar"
+alias jref="java -jar ~/neo-human/repos/JabRef/jabref/build/releases/JabRef-3.4dev.jar"
+alias urldecode='python -c "import sys, urllib as ul; \
+    print ul.unquote_plus(sys.argv[1])"'
+gitreadme() { less ~/neo-human/repos/$1/README.md}
+
+alias mlcd="cd ~/neo-human/programs/ml/ml-and-what-not"
+alias mlstart="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/ml/ml-and-what-not --port=8888"
+alias pncd="cd ~/neo-human/programs/pnotes"
+alias pnstart="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/pnotes --port=8889"
+alias h2cd="cd ~/neo-human/programs/vanity-fair/hydrogen"
+alias h2start="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/vanity-fair/hydrogen/analysis --port=8890"
+
+alias vfh2="cd ~/neo-human/programs/vanity-fair/hydrogen"
+alias vfh2start="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/vanity-fair/hydrogen/analysis --port=8891"
+alias vfhe="cd ~/neo-human/programs/vanity-fair/helium"
+alias lightcd="cd ~/neo-human/repos/let-there-be-light"
+
+alias bi="bundle install"
+#####################################################
+################  ALIASES - END #####################
+#####################################################
+
+
+
+
+# fortune hacks
+if [[ "$OSTYPE" = "linux-gnu" ]]; then
+    CMD_SHUF=shuf
+elif [[ "$OSTYPE" = "darwin"* ]]; then
+    CMD_SHUF=gshuf
+fi
+#fortune -a | cowsay
+fortune -a | fmt -80 -s | $($CMD_SHUF -n 1 -e cowsay cowthink) -$($CMD_SHUF -n 1 -e b d g p s t w y) -f $($CMD_SHUF -n 1 -e $(cowsay -l | tail -n +2)) -n
+
+
+####################################################
+##################  RUBY STUFF #####################
+####################################################
+export PATH="$HOME/.rbenv/rbenv/bin:$PATH"
+export PATH="$HOME/.gem/ruby/2.2.0/bin:$PATH"
+eval "$(rbenv init -)"
+####################################################
+
+
+####################################################
+##################  NPM - STUFF ####################
+####################################################
+# NPM packages in homedir
+export NPM_PACKAGES="$HOME/.npm-packages"
+
+# Tell our environment about user-installed node tools
+export PATH="$NPM_PACKAGES/bin:$PATH"
+# Unset manpath so we can inherit from /etc/manpath via the `manpath` command
+unset MANPATH  # delete if you already modified MANPATH elsewhere in your configuration
+export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+
+# Tell Node about these packages
+export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+####################################################
+
+
+####################################################
+################  THE FUCK #########################
+####################################################
+eval $(thefuck --alias)
+####################################################
+
+
+
+
+####################################################
+################ DIR ALIASES #######################
+####################################################
+function chpwd() {
+    emulate -L zsh
+    local_aliases
+}
+source "$SCRIPT_DIR/zshrc_directory_aliases"
+local_aliases
+####################################################
+
+
+
