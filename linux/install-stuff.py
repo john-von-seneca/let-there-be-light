@@ -53,7 +53,8 @@ packages = [["automake", "axel"],
 			['spotify-client','spotify-client-qt', 'kodi', 'mpv', ''],
 			['libcurl5-gnutls-dev','libxml2-dev','libssl-dev','libreadline-dev', 'nodejs', 'libsqlite3-dev'],
 			['sublime-text-installer','pavucontrol','alsa-tools-gui','fslint','mc','lfm','aptitude','vnstat'],
-			['autojump']
+			['autojump'],
+			['bison', 'cvs', 'flex', 'gperf', 'libtool-bin']
  ]
 
 def change_dir(work):

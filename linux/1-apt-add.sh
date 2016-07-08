@@ -1,7 +1,9 @@
 #!/bin/zsh
 
 # apt-fast
-sudo apt-add-repository ppa:apt-fast/stable
+# sudo apt-add-repository ppa:apt-fast/stable
+sudo apt-add-repository ppa:saiarcot895/myppa
+
 # exfat
 sudo apt-add-repository ppa:relan/exfat
 sudo apt-add-repository ppa:strukturag/libde265
