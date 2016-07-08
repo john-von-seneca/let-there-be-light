@@ -1,0 +1,35 @@
+# apt-fast
+ppa:saiarcot895/myppa
+# exfat
+ppa:relan/exfat
+# ??
+ppa:strukturag/libde265
+# ??
+ppa:jfi/ppa
+# ??
+ppa:weather-indicator-team/ppa
+# ??
+ppa:spvkgn/ppa
+# ??
+ppa:webupd8team/java
+# git
+ppa:git-core/ppa
+# smplayer
+ppa:rvm/smplayer
+# ??
+ppa:team-xbmc/ppa
+# variety
+ppa:peterlevi/ppa
+# subl
+ppa:webupd8team/sublime-text-3
+# deadbeef
+ppa:starws-box/deadbeef-player
+# ??
+ppa:gnome-terminator/ppa
+# ??
+ppa:synapse-core/ppa
+# banshee
+ppa:banshee-team/banshee-unstable
+# ??
+ppa:deluge-team/ppa
+
