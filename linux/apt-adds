@@ -32,4 +32,7 @@ ppa:synapse-core/ppa
 ppa:banshee-team/banshee-unstable
 # ??
 ppa:deluge-team/ppa
-
+# neovim
+ppa:neovim-ppa/unstable
+# clementine
+ppa:me-davidsansome/clementine
