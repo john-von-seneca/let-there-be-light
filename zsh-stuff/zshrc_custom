@@ -139,7 +139,8 @@ alias gc="$SCRIPT_DIR/../git-stuff/gc.sh "
 alias xclip="xclip -selection c"
 #alias jref="java -jar ~/neo-human/repos/jabref/build/releases/JabRef-3.2dev.jar"
 #alias jref="java -jar ~/neo-human/repos/jabref/build/releases/JabRef-3.3dev.jar"
-alias jref="java -jar ~/neo-human/repos/JabRef/jabref/build/releases/JabRef-3.4dev.jar"
+#alias jref="java -jar ~/neo-human/repos/JabRef/jabref/build/releases/JabRef-3.4dev.jar"
+#alias jref="java -jar ~/neo-human/repos/JabRef/jabref/build/releases/JabRef-3.5dev.jar"
 alias urldecode='python -c "import sys, urllib as ul; \
     print ul.unquote_plus(sys.argv[1])"'
 gitreadme() { less ~/neo-human/repos/$1/README.md}
