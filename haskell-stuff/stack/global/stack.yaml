@@ -1,0 +1,6 @@
+flags: {}
+resolver: lts-6.7
+packages: []
+extra-deps: []
+ghc-options:
+  cryptonite: -opta-Wa,-mrelax-relocations=no
