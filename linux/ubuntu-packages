@@ -15,6 +15,7 @@ banshee-extension-lyrics
 binutils-dev
 bison
 build-essential
+cabal-install
 clang
 clementine
 cmake
@@ -34,6 +35,7 @@ deluge-webui
 doxygen
 doxygen-gui
 easytag
+easytag-nautilus
 emacs
 #emacs-snapshot
 #emacs-snapshot-el
@@ -71,6 +73,7 @@ kdelibs5-data
 kdelibs5-plugins
 kodi
 krusader
+lame
 lfm
 libavcodec-dev
 libavformat-dev
@@ -83,6 +86,8 @@ libgtk2.0-dev
 libiomp-dev
 libjasper-dev
 libjpeg-dev
+libmagic-dev
+libmagics++-dev
 libpcre3
 libpython2.7
 libpython2.7-dev
@@ -114,6 +119,7 @@ ntp
 okular
 okular-extra-backends
 pavucontrol
+pdftk
 pdmenu
 pkg-config
 powermanagement-interface
