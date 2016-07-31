@@ -52,3 +52,5 @@ mkdir -p ~/.rbenv/plugins/
 ln -s ~/neo-human/repos/ruby-build/ ~/.rbenv/plugins/
 LinkFile $LIGHT_DIR/ruby-stuff/irbrc ~/.irbrc
 
+LinkFile haskell-stuff/stack ~/.stack
+
