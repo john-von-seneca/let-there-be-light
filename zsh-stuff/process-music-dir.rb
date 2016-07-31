@@ -50,13 +50,15 @@ end
 %w{Data}.each do |meta_src|
 	if(File.directory?(meta_src))
 		puts(">> mv files from #{meta_src} to meta")
+		puts("\tmv #{meta_src}/* meta/")
 		`mv #{meta_src}/* meta/` unless test
+		puts("\trm -rf #{meta_src}")
 		`rm -rf #{meta_src}` unless test
 	end
 end
 
 # other folders to art folder
-%w{scan}.each do |art_src|
+%w{Cover scan Scan Scans Artwork}.each do |art_src|
 	if(File.directory?(art_src))
 		puts(">> mv files from #{art_src} to art")
 		`mv #{art_src}/* art/` unless test
@@ -72,7 +74,7 @@ end
 end
 
 # removing extraneous files
-%w{m3u}.each do |file_ext|
+%w{m3u m3u8}.each do |file_ext|
 	next if Dir.glob("*.#{file_ext}").empty?
 	puts(">> rm #{file_ext} files ... ")
 	`rm -f *.#{file_ext}` unless test
