@@ -37,7 +37,7 @@ alias idea="/media/sulley/home/all-apps/programming/java/idea-IC-143.1184.17/bin
 alias bandwidth-usage="vnstat -i eno1"
 alias cycle-soundcards="ruby $SCRIPT_DIR/change-soundcard.rb cycle"
 alias process-moozik-dir="ruby $SCRIPT_DIR/process-music-dir.rb"
-
+alias fubar="wine ~/.wine/drive_c/Program\ Files\ \(x86\)/foobar2000/foobar2000.exe"
 
 PATH=~/.local/bin:${PATH}
 
