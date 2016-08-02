@@ -4,8 +4,12 @@ require 'shellwords'
 test = false
 
 f_cover = 'cover.jpg'
-if(File.exists?('cover.jpeg'))
-	`mv cover.jpeg #{f_cover}`
+%w{cover.jpeg folder.jpeg folder.jpg Folder.jpg Folder.jpeg Cover.jpg Cover.jpeg}.each do |cover_alt|
+	break if(File.exists?(f_cover))
+	if(File.exists?(cover_alt))
+		`mv #{cover_alt} #{f_cover}`
+		break
+	end
 end
 
 unless(File.exists?(f_cover))
@@ -58,7 +62,7 @@ end
 end
 
 # other folders to art folder
-%w{Cover scan Scan Scans Artwork}.each do |art_src|
+%w{Cover scan Scan Scans scans Artwork artwork}.each do |art_src|
 	if(File.directory?(art_src))
 		puts(">> mv files from #{art_src} to art")
 		`mv #{art_src}/* art/` unless test
