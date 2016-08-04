@@ -32,6 +32,9 @@ deluge-gtk
 deluge-torrent
 deluge-web
 deluge-webui
+djvulibre-bin
+djvulibre-desktop
+djvulibre-plugin
 doxygen
 doxygen-gui
 easytag
