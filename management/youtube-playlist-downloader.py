@@ -53,12 +53,12 @@ def download_from_file():
 def download_from_playlist():
 	assert(len(sys.argv)>=2)
 	dir_playlist = sys.argv[2]
-	pattern_title = None
+	pattern_title = ''
 	if(len(sys.argv)>3):
 		pattern_title = sys.argv[3]
 	print(pattern_title)
 	urls = read_playlist(dir_playlist + "/playlists")
-	patterns = [pattern.strip() for pattern in pattern_title.split(",")]
+	patterns = [pattern.strip() for pattern in pattern_title.split(",") if pattern is not None]
 	pmtrs = get_parameters_playlist(dir_playlist)
 	for pattern in patterns:
 		for url in urls:
