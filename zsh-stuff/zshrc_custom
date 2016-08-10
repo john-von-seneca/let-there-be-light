@@ -149,8 +149,8 @@ alias mlcd="cd ~/neo-human/programs/ml/ml-and-what-not"
 alias mlstart="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/ml/ml-and-what-not --port=8888"
 alias pncd="cd ~/neo-human/programs/pnotes"
 alias pnstart="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/pnotes --port=8889"
-alias h2cd="cd ~/neo-human/programs/vanity-fair/hydrogen"
-alias h2start="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/vanity-fair/hydrogen/analysis --port=8890"
+alias licd="cd ~/neo-human/programs/vanity-fair/lithium/"
+alias listart="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/vanity-fair/lithium/docs/python --port=8890"
 
 alias vfh2="cd ~/neo-human/programs/vanity-fair/hydrogen"
 alias vfh2start="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/vanity-fair/hydrogen/analysis --port=8891"
@@ -179,7 +179,8 @@ fortune -a | fmt -80 -s | $($CMD_SHUF -n 1 -e cowsay cowthink) -$($CMD_SHUF -n 1
 ##################  RUBY STUFF #####################
 ####################################################
 export PATH="$HOME/.rbenv/rbenv/bin:$PATH"
-export PATH="$HOME/.gem/ruby/2.2.0/bin:$PATH"
+#export PATH="$HOME/.gem/ruby/2.2.0/bin:$PATH"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 eval "$(rbenv init -)"
 ####################################################
 
