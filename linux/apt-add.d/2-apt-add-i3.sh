@@ -7,6 +7,6 @@ sudo apt-get update
 sudo apt-get --allow-unauthenticated install i3-autobuild-keyring
 
 # sudo apt-get update
-# sudo apt-get install i3
+# sudo apt-get install i3 i3-wm 
 
 
