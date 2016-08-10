@@ -54,3 +54,7 @@ LinkFile $LIGHT_DIR/ruby-stuff/irbrc ~/.irbrc
 
 LinkFile haskell-stuff/stack ~/.stack
 
+ruby-stuff/install-rails
+
+
+
