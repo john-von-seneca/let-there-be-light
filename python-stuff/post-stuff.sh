@@ -19,5 +19,7 @@ jupyter nbextension enable --py --sys-prefix widgetsnbextension
 pip3 install --user --upgrade sklearn sklearn-pandas sklearn-extensions
 pip3 install --user --upgrade psutil thefuck youtube-dl coursera-dl readline pygraphviz graphviz libpgm dictionary
 
+jupyter nbextension enable --py widgetsnbextension
+
 ####
 # mv ~/.local/lib/python3.5/site-packages/notebook/static/components/MathJax ~/.local/lib/python3.5/site-packages/notebook/static/components/MathJax.bkp.1; ln -s ~/neo-human/repos/MathJax ~/.local/lib/python3.5/site-packages/notebook/static/components

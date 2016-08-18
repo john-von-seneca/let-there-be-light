@@ -21,7 +21,7 @@ ipython
 ipython-extensions 
 ipython-genutils 
 ipython-memwatcher 
-ipywidgets 
+ipywidgets
 itsdangerous 
 jedi 
 jgraph 
