@@ -17,7 +17,9 @@ binutils-dev
 bison
 build-essential
 cabal-install
+calibre
 clang
+clang-tidy
 clementine
 cmake
 cmake-curses-gui
@@ -47,6 +49,7 @@ emacs
 #emacs-snapshot-el
 exfat-fuse
 exfat-utils
+fbreader
 feh
 firefox
 flex
@@ -139,6 +142,8 @@ nodejs
 ntp
 okular
 okular-extra-backends
+openssh-server
+openssh-sftp-server
 oracle-java8-installer
 parafly
 pavucontrol

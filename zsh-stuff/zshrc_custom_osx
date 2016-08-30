@@ -33,3 +33,6 @@ export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig
 ### autojump
 ## brew install autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
+
+alias jrefapp="cd /Applications; ~/neo-human/repos/Jorl17/jar2app/jar2app ~/neo-human/repos/JabRef/jabref/build/releases/JabRef-3.7dev.jar; cd $OLDPWD"

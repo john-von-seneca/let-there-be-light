@@ -4,7 +4,7 @@ require 'shellwords'
 test = false
 
 f_cover = 'cover.jpg'
-%w{cover.jpeg folder.jpeg folder.jpg Folder.jpg Folder.jpeg Cover.jpg Cover.jpeg}.each do |cover_alt|
+%w{cover.jpeg folder.jpeg folder.jpg Folder.jpg Folder.jpeg Cover.jpg Cover.jpeg Front.jpeg Front.jpg front.jpeg front.jpg}.each do |cover_alt|
 	break if(File.exists?(f_cover))
 	if(File.exists?(cover_alt))
 		`mv #{cover_alt} #{f_cover}`
@@ -46,12 +46,12 @@ puts(">> create meta dir")
 
 # mv other images to art folder
 puts('>> moving image files to art/')
-Dir.glob("*.{jpg,jpeg,png,bmp}").each do |img|
+Dir.glob("*.{JPG,jpg,JPEG,jpeg,png,bmp}").each do |img|
 	`mv #{img.shellescape} art/` unless img==f_cover
 end
 
 # other folders to meta folder
-%w{Data}.each do |meta_src|
+%w{Data logs}.each do |meta_src|
 	if(File.directory?(meta_src))
 		puts(">> mv files from #{meta_src} to meta")
 		puts("\tmv #{meta_src}/* meta/")
@@ -62,7 +62,7 @@ end
 end
 
 # other folders to art folder
-%w{Cover scan Scan Scans scans Artwork artwork}.each do |art_src|
+%w{covers Covers Cover scan Scan Scans scans Artwork artwork}.each do |art_src|
 	if(File.directory?(art_src))
 		puts(">> mv files from #{art_src} to art")
 		`mv #{art_src}/* art/` unless test
@@ -71,14 +71,14 @@ end
 end
 
 # moving files to meta
-%w{log cue pdf txt url}.each do |file_ext|
+%w{log cue CUE pdf txt url rtf accurip cfg}.each do |file_ext|
 	next if Dir.glob("*.#{file_ext}").empty?
 	puts(">> mv #{file_ext} files ... ")
 	`mv *.#{file_ext} meta/` unless test
 end
 
 # removing extraneous files
-%w{m3u m3u8}.each do |file_ext|
+%w{m3u m3u8 pls}.each do |file_ext|
 	next if Dir.glob("*.#{file_ext}").empty?
 	puts(">> rm #{file_ext} files ... ")
 	`rm -f *.#{file_ext}` unless test

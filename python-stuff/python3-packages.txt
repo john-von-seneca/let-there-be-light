@@ -65,7 +65,8 @@ pycurl
 pydot3 
 pyflakes 
 Pygments 
-pygraphviz 
+pygraphviz
+pygtk
 pyobjc-core 
 pyparsing 
 pyreadline 

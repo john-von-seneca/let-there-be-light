@@ -104,12 +104,12 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 
-
-if [[ "$OSTYPE" = "linux-gnu" ]]; then
+OSTYPE=`uname`
+if [[ "$OSTYPE" = "Linux" ]]; then
 	#echo "linux-gnu"
 	source $SCRIPT_DIR/zshrc_custom_linux
 	#echo "linux done baby"
-elif [[ "$OSTYPE" = "darwin"* ]]; then
+elif [[ "$OSTYPE" = "Darwin" ]]; then
     #echo "osx"
 	source $SCRIPT_DIR/zshrc_custom_osx
 elif [[ "$OSTYPE" = "cygwin" ]]; then
@@ -145,10 +145,9 @@ alias urldecode='python -c "import sys, urllib as ul; \
     print ul.unquote_plus(sys.argv[1])"'
 gitreadme() { less ~/neo-human/repos/$1/README.md}
 
-alias mlcd="cd ~/neo-human/programs/ml/ml-and-what-not"
-alias mlstart="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/ml/ml-and-what-not --port=8888"
-alias pncd="cd ~/neo-human/programs/pnotes"
-alias pnstart="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/pnotes --port=8889"
+alias scd="cd ~/neo-human/programs/vanity-fair/scribbles"
+alias sstart="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/vanity-fair/scribbles --port=8888"
+
 alias licd="cd ~/neo-human/programs/vanity-fair/lithium/"
 alias listart="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/vanity-fair/lithium/docs/python --port=8890"
 
@@ -166,9 +165,9 @@ alias bi="bundle install"
 
 
 # fortune hacks
-if [[ "$OSTYPE" = "linux-gnu" ]]; then
+if [[ "$OSTYPE" = "Linux" ]]; then
     CMD_SHUF=shuf
-elif [[ "$OSTYPE" = "darwin"* ]]; then
+elif [[ "$OSTYPE" = "Darwin" ]]; then
     CMD_SHUF=gshuf
 fi
 #fortune -a | cowsay
