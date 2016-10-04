@@ -85,6 +85,9 @@ d ${downspeed eno1}/${totaldown eno1} u ${upspeed eno1}/${totalup eno1} | \
 ${if_up wlan0}wlan0 ${addr wlan0} | ${endif}\
 #
 #
+### rpm stats			   
+${exec sensors | awk '/fan2/ {a=gsub(/[ \t\r\n]/,"",$2); print $2","}'} \
+${exec sensors | awk '/fan4/ {a=gsub(/[ \t\r\n]/,"",$2); print $2" rpm"}'} | \
 ###	CPU stats
 CPU $cpu% ${loadavg 1} ${exec sensors | grep -m 1 "Core 0" | sed -n 's/Core 0.*+\(.*\).[0-9]°C.*(high.*/\1°C/p'} | \
 ## CPU ${cpu cpu1}% ${exec sensors | grep -m 1 "Core 0"|awk '{print $3}'} | \
