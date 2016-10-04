@@ -42,4 +42,9 @@ i3-msg 'workspace 7'
 
 sleep 5
 
-# variety &
+# other bgnd apps
+syncthing
+
+sleep 15
+
+variety &
