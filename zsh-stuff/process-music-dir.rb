@@ -3,12 +3,22 @@ require 'shellwords'
 
 test = false
 
+def get_all_cases(elements)
+	elements.map {|f| [f.upcase, f.capitalize, f]}.flatten()
+end
+
 f_cover = 'cover.jpg'
-%w{cover.jpeg folder.jpeg folder.jpg Folder.jpg Folder.jpeg Cover.jpg Cover.jpeg Front.jpeg Front.jpg front.jpeg front.jpg}.each do |cover_alt|
+possible_cover_names = get_all_cases(%w{cover folder front})
+possible_cover_exts  = get_all_cases(%w{jpeg jpg})
+
+possible_cover_names.each do |possible_cover_name|
 	break if(File.exists?(f_cover))
-	if(File.exists?(cover_alt))
-		`mv #{cover_alt} #{f_cover}`
-		break
+	possible_cover_exts.each do |possible_cover_ext|
+		cover_alt = possible_cover_name + '.' + possible_cover_ext
+		if(File.exists?(cover_alt))
+			`mv #{cover_alt} #{f_cover}`
+			break
+		end
 	end
 end
 
@@ -71,7 +81,7 @@ end
 end
 
 # moving files to meta
-%w{log cue CUE pdf txt url rtf accurip cfg}.each do |file_ext|
+%w{log cue CUE pdf txt TXT Txt url rtf accurip cfg md5}.each do |file_ext|
 	next if Dir.glob("*.#{file_ext}").empty?
 	puts(">> mv #{file_ext} files ... ")
 	`mv *.#{file_ext} meta/` unless test
