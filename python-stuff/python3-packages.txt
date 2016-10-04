@@ -30,7 +30,8 @@ jsonschema
 jupyter 
 jupyter-client 
 jupyter-console 
-jupyter-core 
+jupyter-core
+jupyterthemes
 Markdown 
 MarkupSafe 
 matplotlib 
