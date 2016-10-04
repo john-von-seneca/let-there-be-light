@@ -40,8 +40,13 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # navigate to prev/next workspace
-bindsym $mod+Control+Left workspace prev
-bindsym $mod+Control+Right workspace next
+bindsym $mod+Ctrl+Shift+Left workspace prev
+bindsym $mod+Ctrl+Shift+Right workspace next
+
+bindsym $mod+Ctrl+Right resize shrink width 5 px or 5 ppt
+bindsym $mod+Ctrl+Up resize grow height 5 px or 5 ppt
+bindsym $mod+Ctrl+Down resize shrink height 5 px or 5 ppt
+bindsym $mod+Ctrl+Left resize grow width 5 px or 5 ppt
 
 # change focus
 bindsym $mod+j focus left
@@ -106,16 +111,16 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Ctrl+1 move container to workspace 1
+bindsym $mod+Ctrl+2 move container to workspace 2
+bindsym $mod+Ctrl+3 move container to workspace 3
+bindsym $mod+Ctrl+4 move container to workspace 4
+bindsym $mod+Ctrl+5 move container to workspace 5
+bindsym $mod+Ctrl+6 move container to workspace 6
+bindsym $mod+Ctrl+7 move container to workspace 7
+bindsym $mod+Ctrl+8 move container to workspace 8
+bindsym $mod+Ctrl+9 move container to workspace 9
+bindsym $mod+Ctrl+0 move container to workspace 10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -132,10 +137,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        # bindsym j resize shrink width 10 px or 10 ppt
+        # bindsym k resize grow height 10 px or 10 ppt
+        # bindsym l resize shrink height 10 px or 10 ppt
+        # bindsym semicolon resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -158,10 +163,10 @@ exec xautolock -time 20 -locker "i3lock  -i /home/dragon/i3lock-wp-1.png" &
 bindsym $mod+Shift+t exec "i3-nagbar -t warning -m 'you wanna lock and load' -b 'Yes, please1' 'i3lock'"
 
 
-# bindsym XF86AudioLowerVolume exec amixer -q set Master 5-
-#bindsym XF86AudioRaiseVolume exec amixer -q set Master 5+
-bindsym XF86AudioLowerVolume exec pactl -- set-sink-volume `pactl list sinks | grep -B 1 RUNNING | head -n 1 | cut -d# -f2` -10%
-bindsym XF86AudioRaiseVolume exec pactl -- set-sink-volume `pactl list sinks | grep -B 1 RUNNING | head -n 1 | cut -d# -f2` +10%
+bindsym XF86AudioLowerVolume exec amixer -q set Master 5-
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 5+
+# bindsym XF86AudioLowerVolume exec pactl -- set-sink-volume `pactl list sinks | grep -B 1 RUNNING | head -n 1 | cut -d# -f2` -10%
+# bindsym XF86AudioRaiseVolume exec pactl -- set-sink-volume `pactl list sinks | grep -B 1 RUNNING | head -n 1 | cut -d# -f2` +10%
 
 
 # bindsym XF86AudioLowerVolume exec "ruby /home/dragon/neo-human/repos/let-there-be-light/change-volume.rb -"
@@ -183,6 +188,13 @@ bar {
 		# show status bar in light blue
 		statusline #ADD8E6
 	}
+	# colors {
+	# 	#color class	   border  back.   text
+	# 	focused_workspace  #007030 #007030 #ffffff
+	# 	active_workspace   #555555 #555555 #ffffff
+	# 	inactive_workspace #000000 #000000 #888888
+	# 	urgent_workspace   #2f343a #900000 #ffffff
+	# }
 	status_command conky -c ~/.conkyrc
 	position top
 	tray_output primary
