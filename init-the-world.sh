@@ -30,6 +30,7 @@ echo "hi"
 touch ~/.zshrc_local
 
 LinkFile zsh-stuff/zshrc ~/.zshrc
+LinkFile Xmodmap ~/.Xmodmap 
 
 LinkFile ../dot-emacs-d/ ~/.emacs.d
 ~/.emacs.d/install.sh
