@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/dragon/neo-human/programs/timepass/rails/blog'
+let g:netrw_dirhist_2='/home/dragon/neo-human/programs/timepass/rails/blog/db'
+let g:netrw_dirhist_3='/home/dragon/neo-human/programs/timepass/rails/blog/db/migrate'
+let g:netrw_dirhist_4='/home/dragon/neo-human/programs/timepass/rails/family'
+let g:netrw_dirhist_5='/home/dragon/neo-human/programs/timepass/rails/blog'
+let g:netrw_dirhist_6='/home/dragon/neo-human/programs/timepass/rails/blog/db'
+let g:netrw_dirhist_7='/home/dragon/neo-human/programs/timepass/rails/blog/db/migrate'
+let g:netrw_dirhist_8='/home/dragon/neo-human/repos/let-there-be-light'
+let g:netrw_dirhist_9='/home/dragon/neo-human/repos/let-there-be-light/linux'

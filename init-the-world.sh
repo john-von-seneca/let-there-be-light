@@ -58,4 +58,7 @@ LinkFile haskell-stuff/stack ~/.stack
 ruby-stuff/install-rails
 
 
+# vim stuff
+LinkFile vim-stuff/vim $HOME/.vim
+LinkFile vim-stuff/vimrc $HOME/.vimrc
 
