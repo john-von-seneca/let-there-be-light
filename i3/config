@@ -43,10 +43,10 @@ bindsym $mod+d exec dmenu_run
 bindsym $mod+Ctrl+Shift+Left workspace prev
 bindsym $mod+Ctrl+Shift+Right workspace next
 
-bindsym $mod+Ctrl+Right resize shrink width 5 px or 5 ppt
+bindsym $mod+Ctrl+Right resize grow width 5 px or 5 ppt
 bindsym $mod+Ctrl+Up resize grow height 5 px or 5 ppt
 bindsym $mod+Ctrl+Down resize shrink height 5 px or 5 ppt
-bindsym $mod+Ctrl+Left resize grow width 5 px or 5 ppt
+bindsym $mod+Ctrl+Left resize shrink width 5 px or 5 ppt
 
 # change focus
 bindsym $mod+j focus left
