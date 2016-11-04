@@ -43,8 +43,12 @@ i3-msg 'workspace 7'
 sleep 5
 
 # other bgnd apps
-syncthing
+syncthing &
 
 sleep 15
 
 variety &
+
+sleep 15
+
+# jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/vanity-fair/scribbles --port=8888 --ip=0.0.0.0 &
