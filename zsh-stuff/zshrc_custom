@@ -73,7 +73,7 @@ plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew
 #######################################################
 ################## ANTIGEN ############################
 #######################################################
-source ~/neo-human/repos/antigen/antigen.zsh
+source ~/repos/antigen/antigen.zsh
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
