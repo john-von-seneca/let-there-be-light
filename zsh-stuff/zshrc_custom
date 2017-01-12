@@ -106,11 +106,11 @@ export LC_ALL=en_US.UTF-8
 
 OSTYPE=`uname`
 if [[ "$OSTYPE" = "Linux" ]]; then
-	#echo "linux-gnu"
+	echo "linux-gnu"
 	source $SCRIPT_DIR/zshrc_custom_linux
 	#echo "linux done baby"
 elif [[ "$OSTYPE" = "Darwin" ]]; then
-    #echo "osx"
+    echo "osx"
 	source $SCRIPT_DIR/zshrc_custom_osx
 elif [[ "$OSTYPE" = "cygwin" ]]; then
         echo "OS TYPE:: cygwin"
@@ -135,6 +135,7 @@ alias pis="pip3 search"
 alias gc="$SCRIPT_DIR/../git-stuff/gc.sh "
 #gc () { cd ~/neo-human/repos; git clone $1}
 
+
 #alias +="mkdir"
 alias xclip="xclip -selection c"
 #alias jref="java -jar ~/neo-human/repos/jabref/build/releases/JabRef-3.2dev.jar"
@@ -146,15 +147,17 @@ alias urldecode='python -c "import sys, urllib as ul; \
 gitreadme() { less ~/neo-human/repos/$1/README.md}
 
 alias scd="cd ~/neo-human/programs/vanity-fair/scribbles"
-alias sstart="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/vanity-fair/scribbles --port=8888 --ip=0.0.0.0"
+alias sstart="jupyter3 notebook --no-browser --notebook-dir=~/neo-human/programs/vanity-fair/scribbles --port=8888 --ip=0.0.0.0"
 
 alias licd="cd ~/neo-human/programs/vanity-fair/lithium/"
-alias listart="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/vanity-fair/lithium/docs/python --port=8890 --ip=0.0.0.0"
+alias listart="jupyter3 notebook --no-browser --notebook-dir=~/neo-human/programs/vanity-fair/lithium/docs/python --port=8890 --ip=0.0.0.0"
 
 alias vfh2="cd ~/neo-human/programs/vanity-fair/hydrogen"
-alias vfh2start="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/vanity-fair/hydrogen --port=8891 --ip=0.0.0.0"
+alias vfh2start="jupyter3 notebook --no-browser --notebook-dir=~/neo-human/programs/vanity-fair/hydrogen --port=8891 --ip=0.0.0.0"
 alias vfhe="cd ~/neo-human/programs/vanity-fair/helium"
 alias lightcd="cd ~/neo-human/repos/let-there-be-light"
+
+alias olastart="jupyter3 notebook --no-browser --notebook-dir=~/ola --port=8888 --ip=0.0.0.0"
 
 alias bi="bundle install"
 #####################################################
@@ -220,6 +223,105 @@ function chpwd() {
 source "$SCRIPT_DIR/zshrc_directory_aliases"
 local_aliases
 ####################################################
+
+# prog-hive
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home"
+export PATH=$PATH:$JAVA_HOME/bin
+
+
+####################################################
+###############  HADOOP ############################
+####################################################
+
+# if [[ "$OSTYPE" = "Linux" ]]; then
+# 	echo "linux-gnu"
+# 	export HADOOP_HOME="/usr/local/hadoop"
+# elif [[ "$OSTYPE" = "Darwin" ]]; then
+#     echo "osx: hadoop"
+# 	export HADOOP_HOME="/usr/local/Cellar/hadoop/`hadoop version | head -n 1 | sed 's/Hadoop \(.*\)/\1/'`/libexec"
+# fi
+
+# PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
+# alias hstart="$HADOOP_HOME/sbin/start-dfs.sh;$HADOOP_HOME/sbin/start-yarn.sh"
+# alias hstop="$HADOOP_HOME/sbin/stop-yarn.sh;$HADOOP_HOME/sbin/stop-dfs.sh"
+
+# prog-hive
+export HADOOP_HOME="/Users/balasanjeevi.b/apps/hadoop-2.7.3"
+export PATH=$PATH:$HADOOP_HOME/bin
+
+####################################################
+
+
+####################################################
+###############  MAVEN  ############################
+####################################################
+
+# export MAVEN_HOME="/usr/local/Cellar/maven/`mvn --version | head -n 1 | sed 's/.*Apache Maven \(.[0-9]*.[0-9]*.[0-9]*\) .*/\1/'`"
+# export PATH=$PATH:$MAVEN_HOME/bin
+#
+####################################################
+
+
+####################################################
+###############  SPARK  ############################
+####################################################
+
+# export SPARK_HOME="/usr/local/Cellar/apache-spark/`brew info apache-spark | head -n 1 | sed 's/apache-spark: stable \(.*\), HEAD/\1/'`"
+# export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
+if [[ "$OSTYPE" = "Linux" ]]; then
+    echo "spark-linux"
+    export SPARK_HOME="~/apps/spark"
+elif [[ "$OSTYPE" = "Darwin" ]]; then
+    echo "spark-osx"
+    export SPARK_HOME="/Users/balasanjeevi.b/apps/spark-2.1.0-bin-hadoop2.7"
+fi
+export PATH=$PATH:$SPARK_HOME/bin
+####################################################
+
+
+
+####################################################
+###############  HIVE  #############################
+####################################################
+
+# export HIVE_HOME="/usr/local/Cellar/hive/2.1.0/libexec"
+# export PATH=$PATH:$HIVE_HOME/bin
+# # export CLASSPATH=$CLASSPATH:$HADOOP_HOME/libexec/Hadoop/lib/*:.
+# export CLASSPATH=$CLASSPATH:$HIVE_HOME/lib/\*:.
+
+# prog-hive
+export HIVE_HOME="/Users/balasanjeevi.b/apps/apache-hive-2.1.1-bin"
+export PATH=$PATH:$HIVE_HOME/bin
+
+####################################################
+
+
+####################################################
+###############  DERBY  ############################
+####################################################
+
+# export DERBY_HOME="/usr/local/Cellar/derby/10.12.1.1/libexec"
+# export PATH=$PATH:$DERBY_HOME/bin
+# #export CLASSPATH=$CLASSPATH:$DERBY_HOME/lib/derby.jar:$DERBY_HOME/lib/derbytools.jar:$DERBY_HOME/lib/derbyclient.jar
+# export CLASSPATH=$CLASSPATH:$DERBY_HOME/lib/derbytools.jar:$DERBY_HOME/lib/derbyclient.jar
+
+####################################################
+
+
+
+
+
+#####################################
+############## iterm  ###############
+#####################################
+source $SCRIPT_DIR/../iTerm2-ssh.zsh
+
+#####################################
+
+
+
+
+
 
 
 

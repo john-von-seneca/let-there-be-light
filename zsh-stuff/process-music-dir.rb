@@ -103,7 +103,7 @@ class ProcessMusicDir
 	end
 
 	def move_other_meta_folder_contents
-		%w{Data logs}.each do |meta_src|
+		%w{Data logs Technical}.each do |meta_src|
 			if(File.directory?(shell_dst(meta_src)))
 				puts(">> mv files from #{shell_dst(meta_src)} to #{@dir_name}/meta")
 				puts("\tmv #{shell_dst(meta_src)}/* #{shell_dst('meta')}/")
@@ -115,7 +115,7 @@ class ProcessMusicDir
 	end
 
 	def move_other_image_folder_contents
-		%w{covers Covers Cover scan Scan Scans scans Artwork artwork}.each do |art_src|
+		%w{Art covers Covers Cover scan SCAN Scan Scans scans Artwork artwork}.each do |art_src|
 			art_src_full = shell_dst(art_src)
 			if(File.directory?(art_src_full))
 				puts(">> mv files from #{art_src_full} to art")
@@ -126,7 +126,7 @@ class ProcessMusicDir
 	end
 
 	def move_meta_files
-		%w{log cue CUE pdf txt TXT Txt url rtf accurip cfg md5 nfo}.each do |file_ext|
+		%w{sfv log LOG cue CUE pdf txt TXT Txt url rtf accurip cfg md5 nfo doc}.each do |file_ext|
 			next if Dir.glob("#{@dir_name.shellescape}/*.#{file_ext}").empty?
 			puts(">> mv #{@dir_name.shellescape}/*.#{file_ext} files ... ")
 			`mv #{@dir_name.shellescape}/*.#{file_ext} #{shell_dst('meta')}/` unless test

@@ -6,7 +6,7 @@
 # PROJ_A="/path/to/project/a"
 # PROJ_B="/path/to/project/b"
 
-proj_light="$HOME/neo-human/repos/let-there-be-light"
+proj_light="$HOME/neo-human/programs/vanity-fair/let-there-be-light"
 proj_vfh2="$HOME/neo-human/programs/vanity-fair/hydrogen"
 dir_aliases="$proj_light/zsh-stuff/dir-aliases"
 

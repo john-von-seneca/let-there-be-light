@@ -32,7 +32,7 @@ touch ~/.zshrc_local
 LinkFile zsh-stuff/zshrc ~/.zshrc
 LinkFile Xmodmap ~/.Xmodmap 
 
-LinkFile ../dot-emacs-d ~/.emacs.d
+LinkFile ../dot-emacs-d/ ~/.emacs.d
 if [ "$1" = "only-link" ]; then
 	echo 'skipping emacs install'
 else
@@ -74,5 +74,3 @@ fi;
 LinkFile vim-stuff/vim $HOME/.vim
 LinkFile vim-stuff/vimrc $HOME/.vimrc
 
-# mathjax
-LinkFile ~/repos/MathJax ~/.local/lib/python3.5/site-packages/notebook/static/components

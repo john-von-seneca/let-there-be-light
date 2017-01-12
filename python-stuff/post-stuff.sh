@@ -1,6 +1,6 @@
-#!/usr/bin/zsh
+#!/bin/zsh
 
-cd ~/neo-human/repos/ipython-contrib/IPython-notebook-extensions
+cd ~/repos/ipython-contrib/jupyter_contrib_nbextensions
 python3 setup.py install --user
 # pip3 install --user --upgrade -r requirements.txt
 pip3 install --user --upgrade psutil widgetsnbextension
@@ -23,3 +23,6 @@ jupyter nbextension enable --py widgetsnbextension
 
 ####
 # mv ~/.local/lib/python3.5/site-packages/notebook/static/components/MathJax ~/.local/lib/python3.5/site-packages/notebook/static/components/MathJax.bkp.1; ln -s ~/neo-human/repos/MathJax ~/.local/lib/python3.5/site-packages/notebook/static/components
+
+
+pip3 install --user toree graphviz
