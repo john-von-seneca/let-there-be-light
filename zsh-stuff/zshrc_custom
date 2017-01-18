@@ -243,9 +243,6 @@ local_aliases
 # alias hstart="$HADOOP_HOME/sbin/start-dfs.sh;$HADOOP_HOME/sbin/start-yarn.sh"
 # alias hstop="$HADOOP_HOME/sbin/stop-yarn.sh;$HADOOP_HOME/sbin/stop-dfs.sh"
 
-# prog-hive
-export HADOOP_HOME="/Users/balasanjeevi.b/apps/hadoop-2.7.3"
-export PATH=$PATH:$HADOOP_HOME/bin
 
 ####################################################
 
@@ -287,9 +284,7 @@ export PATH=$PATH:$SPARK_HOME/bin
 # # export CLASSPATH=$CLASSPATH:$HADOOP_HOME/libexec/Hadoop/lib/*:.
 # export CLASSPATH=$CLASSPATH:$HIVE_HOME/lib/\*:.
 
-# prog-hive
-export HIVE_HOME="/Users/balasanjeevi.b/apps/apache-hive-2.1.1-bin"
-export PATH=$PATH:$HIVE_HOME/bin
+
 
 ####################################################
 

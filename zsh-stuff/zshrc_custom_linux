@@ -44,3 +44,12 @@ PATH=~/.local/bin:${PATH}
 
 # in autojump
 source /usr/share/autojump/autojump.zsh
+
+
+# prog-hive
+export HIVE_HOME="/home/dragon/apps/apache-hive"
+export PATH=$PATH:$HIVE_HOME/bin
+
+# prog-hive
+export HADOOP_HOME="/home/dragon/apps/hadoop"
+export PATH=$PATH:$HADOOP_HOME/bin
