@@ -1,0 +1,75 @@
+# This is the default .slate file.
+# If no ~/.slate file exists this is the file that will be used.
+
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+
+# Resize Bindings - ctrl + alt for resizing
+bind right:alt;ctrl       resize +5% +0
+bind left:alt;ctrl        resize -5% +0
+bind up:alt;ctrl          resize +0   -5%
+bind down:alt;ctrl        resize +0   +5%
+# bind right:ctrl;alt;cmd  resize -10% +0 bottom-right
+# bind left:ctrl;alt;cmd   resize +10% +0 bottom-right
+# bind up:ctrl;alt;cmd     resize +0   +10% bottom-right
+# bind down:ctrl;alt;cmd   resize +0   -10% bottom-right
+
+# Push Bindings - cmd+ctrl (shoving to top,bottom,left,right)
+#bind right:ctrl;cmd  push right bar-resize:screenSizeX/3
+#bind left:ctrl;cmd   push left  bar-resize:screenSizeX/3
+#bind up:ctrl;cmd     push up    bar-resize:screenSizeY/2
+#bind down:ctrl;cmd   push down  bar-resize:screenSizeY/2
+bind right:ctrl;cmd  push right bar-resize:screenSizeX*1/2
+bind left:ctrl;cmd   push left  bar-resize:screenSizeX*1/2
+bind up:ctrl;cmd     push up    bar-resize:screenSizeY*3/4
+bind down:ctrl;cmd   push down  bar-resize:screenSizeY/4
+
+if header['set-cookie'] &&
+          header['set-cookie'].first &&
+          (header['set-cookie'].first =~ /tgt=([^&]+);/ ||
+              header['set-cookie'].first =~ /tgt=([^&]+)/) # Yogi: ";" isn't present so adding this regex as a fallback
+        tgt = $~[1]
+      end
+
+# Nudge Bindings - alt+shift
+bind right:cmd;shift;alt nudge +10% +0
+bind left:cmd;shift;alt  nudge -10% +0
+bind up:cmd;shift;alt    nudge +0   -10%
+bind down:cmd;shift;alt  nudge +0   +10%
+
+# Throw Bindings: ctrl+alt
+bind 1:ctrl;alt         throw 0 resize
+bind 2:ctrl;alt         throw 1 resize
+bind 3:ctrl;alt         throw 2 resize
+
+# shift+cmd
+bind right:ctrl;shift;cmd throw right resize
+bind left:ctrl;shift;cmd  throw left  resize
+bind up:ctrl;shift;cmd    throw up    resize
+bind down:ctrl;shift;cmd  throw down  resize
+
+# Focus Bindings
+bind right:cmd;alt;ctrl    focus right
+bind left:cmd;alt;ctrl     focus left
+bind up:cmd;alt;ctrl       focus up
+bind down:cmd;alt;ctrl     focus down
+# bind up:cmd;alt   focus behind
+# bind down:cmd;alt focus behind
+
+# Window Hints
+#bind esc:cmd hint
+bind f9 hint
+# Show grid
+bind g:cmd;ctrl;alt grid padding:5 1680x1050:16,9 1050x1680:9,16
+
+# Toggle between applications
+#bind 1:ctrl toggle 'Firefox','MacVim'
+#bind 2:ctrl toggle 'MacVim','Firefox'
+#bind 3:ctrl toggle 'iTerm','MacVim'
+#bind 4:ctrl toggle 'MacVim','iTerm'
+
+bind 1:ctrl snapshot theName save-to-disk;stack
+
+# Application switcher
+#bind tab:cmd switch
