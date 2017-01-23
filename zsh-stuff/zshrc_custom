@@ -146,6 +146,11 @@ alias urldecode='python -c "import sys, urllib as ul; \
     print ul.unquote_plus(sys.argv[1])"'
 gitreadme() { less ~/neo-human/repos/$1/README.md}
 
+if [[ "$OSTYPE" = "Linux" ]]; then
+	alias jupyter3=jupyter
+	#echo "linux done baby"
+fi
+
 alias scd="cd ~/neo-human/programs/vanity-fair/scribbles"
 alias sstart="jupyter3 notebook --no-browser --notebook-dir=~/neo-human/programs/vanity-fair/scribbles --port=8888 --ip=0.0.0.0"
 
