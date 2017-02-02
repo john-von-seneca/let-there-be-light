@@ -43,13 +43,19 @@ export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig
 alias jrefapp="cd /Applications; ~/neo-human/repos/Jorl17/jar2app/jar2app ~/neo-human/repos/JabRef/jabref/build/releases/JabRef-3.7dev.jar; cd $OLDPWD"
 alias ls="gls --color=tty"
 
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home"
+if [[ `id -un` = "dragon" ]]; then
+  echo "osx dragon"
+  export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home"
+elif [[ `id -un` = "balasanjeevi.b" ]]; then 
+  echo "osx bal"
+  export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home"
+fi
 export PATH=$PATH:$JAVA_HOME/bin
 
 # prog-hive
-export HIVE_HOME="/Users/balasanjeevi.b/apps/apache-hive-2.1.1-bin"
+export HIVE_HOME="/Users/balasanjeevi.b/apps/apache-hive"
 export PATH=$PATH:$HIVE_HOME/bin
 
 # prog-hive
-export HADOOP_HOME="/Users/balasanjeevi.b/apps/hadoop-2.7.3"
+export HADOOP_HOME="/Users/balasanjeevi.b/apps/hadoop"
 export PATH=$PATH:$HADOOP_HOME/bin

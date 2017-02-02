@@ -152,7 +152,7 @@ if [[ "$OSTYPE" = "Linux" ]]; then
 fi
 
 alias scd="cd ~/neo-human/programs/vanity-fair/scribbles"
-alias sstart="jupyter3 notebook --no-browser --notebook-dir=~/neo-human/programs/vanity-fair/scribbles --port=8888 --ip=0.0.0.0"
+alias sstart="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/vanity-fair/scribbles --port=8888 --ip=0.0.0.0"
 
 alias licd="cd ~/neo-human/programs/vanity-fair/lithium/"
 alias listart="jupyter3 notebook --no-browser --notebook-dir=~/neo-human/programs/vanity-fair/lithium/docs/python --port=8890 --ip=0.0.0.0"
@@ -273,7 +273,7 @@ if [[ "$OSTYPE" = "Linux" ]]; then
     export SPARK_HOME="/home/dragon/apps/spark"
 elif [[ "$OSTYPE" = "Darwin" ]]; then
     echo "spark-osx"
-    export SPARK_HOME="/Users/balasanjeevi.b/apps/spark-2.1.0-bin-hadoop2.7"
+    export SPARK_HOME="$HOME/apps/spark"
 fi
 export PATH=$PATH:$SPARK_HOME/bin
 ####################################################
