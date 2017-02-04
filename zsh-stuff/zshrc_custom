@@ -80,17 +80,27 @@ antigen use oh-my-zsh
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundles <<EOBUNDLES
 EOBUNDLES
-antigen bundle git
-antigen bundle heroku
-antigen bundle pip
-antigen bundle lein
+antigen bundle autojump
 antigen bundle command-not-found
-
+antigen bundle common-aliases
+antigen bundle git
+antigen bundle git-extras
+antigen bundle git-flow
+antigen bundle heroku
+antigen bundle lein
+antigen bundle pip
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
 
+antigen-use oh-my-zsh
+antigen-bundle arialdomartini/oh-my-git
+antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
+
 # Load the theme.
-antigen theme robbyrussell
+# antigen theme kardan
+antigen theme miloshadzic
+# antigen theme theunraveler
+
 
 # Tell antigen that you're done.
 antigen apply
