@@ -132,7 +132,7 @@ alias pip_upgrade_all="pip3 list | cut -d' ' -f1 -  | xargs -I packages pip3 ins
 alias pi="pip3 install --user --upgrade"
 alias pi2="pip2 install --user --upgrade"
 alias pis="pip3 search"
-alias gc="$SCRIPT_DIR/../git-stuff/gc.sh "
+alias gc="zsh $SCRIPT_DIR/../git-stuff/gc.sh "
 #gc () { cd ~/neo-human/repos; git clone $1}
 
 
