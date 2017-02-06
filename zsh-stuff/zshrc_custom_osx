@@ -59,3 +59,18 @@ export PATH=$PATH:$HIVE_HOME/bin
 # prog-hive
 export HADOOP_HOME="/Users/balasanjeevi.b/apps/hadoop"
 export PATH=$PATH:$HADOOP_HOME/bin
+
+
+if [[ `id -un` = "balasanjeevi.b" ]]; then
+  echo "osx ola"
+
+  alias rone2me="rsync -azvh --exclude='.git/' --compress-level=5 rone:ola/ ~/ola/"
+  alias me2rone="rsync -azvh --exclude='.git/' --compress-level=5 ~/ola/ rone:ola/"
+
+  alias asgw2me="rsync -azvh --exclude='.git/' --compress-level=5 asgw:ola/ ~/ola/"
+  alias me2asgw="rsync -azvh --exclude='.git/' --compress-level=5 ~/ola/ asgw:ola/"
+elif [[ `id -un` = "dragon" ]]; then
+  echo "osx personal"
+fi
+
+
