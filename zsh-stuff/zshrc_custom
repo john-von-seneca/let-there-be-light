@@ -98,9 +98,10 @@ antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
 
 # Load the theme.
 # antigen theme kardan
-antigen theme miloshadzic
+# antigen theme miloshadzic
 # antigen theme theunraveler
-
+antigen bundle mafredri/zsh-async
+antigen bundle sindresorhus/pure
 
 # Tell antigen that you're done.
 antigen apply
