@@ -41,9 +41,9 @@
 
 [core]
     excludesfile = .DS_Store
-    excludesfile = /Users/balasanjeevi.b/.gitignore_global
     excludesfile = $(HOME)/.gitignore_global
-#	attributesfile = $HOME/neo-human/programs/vanity-fair/let-there-be-light/git-stuff/gitattributes
+	attributesfile = $HOME/neo-human/programs/vanity-fair/let-there-be-light/git-stuff/gitattributes
+	#attributesfile = /home/dragon/neo-human/programs/vanity-fair/let-there-be-light/git-stuff/gitattributes
 
 [difftool "sourcetree"]
         cmd = opendiff \"$LOCAL\" \"$REMOTE\"
@@ -72,6 +72,8 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
-#[filter "dropoutput_ipynb"]
-#	clean = /home/dragon/repos/toobaz/ipynb_output_filter/ipynb_output_filter.py
-#	smudge = cat
+
+[filter "drop_output_ipynb"]
+	#clean = /home/dragon/repos/toobaz/ipynb_output_filter/ipynb_output_filter.py
+	clean = $HOME/repos/toobaz/ipynb_output_filter/ipynb_output_filter.py
+	smudge = cat
