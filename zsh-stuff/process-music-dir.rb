@@ -134,7 +134,7 @@ class ProcessMusicDir
 	end
 
 	def remove_extraneous_files
-		%w{m3u m3u8 pls ini}.each do |file_ext|
+		%w{m3u m3u8 pls ini db}.each do |file_ext|
 			next if Dir.glob("#{@dir_name.shellescape}/*.#{file_ext}").empty?
 			puts(">> rm #{@dir_name.shellescape}/*.#{file_ext} files ... ")
 			`rm -f #{@dir_name.shellescape}/*.#{file_ext}` unless test

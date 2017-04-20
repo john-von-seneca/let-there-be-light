@@ -66,8 +66,8 @@ export PATH=$PATH:$HADOOP_HOME/bin
 if [[ `id -un` = "balasanjeevi.b" ]]; then
   echo "osx ola"
 
-  alias rone2me="rsync -azvh --exclude='.git/' --compress-level=5 rone:ola/ ~/ola/"
-  alias me2rone="rsync -azvh --exclude='.git/' --compress-level=5 ~/ola/ rone:ola/"
+  alias rone2me="rsync -azvh --progress --partial --update --exclude='.git/' --compress-level=5 rone:ola/ ~/ola/"
+  alias me2rone="rsync -azvh --progress --partial --update --exclude='.git/' --compress-level=5 ~/ola/ rone:ola/"
 
   alias asgw2me="rsync -azvh --exclude='.git/' --compress-level=5 asgw:ola/ ~/ola/"
   alias me2asgw="rsync -azvh --exclude='.git/' --compress-level=5 ~/ola/ asgw:ola/"
