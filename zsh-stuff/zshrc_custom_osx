@@ -71,8 +71,13 @@ if [[ `id -un` = "balasanjeevi.b" ]]; then
 
   alias asgw2me="rsync -azvh --exclude='.git/' --compress-level=5 asgw:ola/ ~/ola/"
   alias me2asgw="rsync -azvh --exclude='.git/' --compress-level=5 ~/ola/ asgw:ola/"
+  
+  GPG_TTY=$(tty)
+  export GPG_TTY
 elif [[ `id -un` = "dragon" ]]; then
   echo "osx personal"
 fi
+
+
 
 
