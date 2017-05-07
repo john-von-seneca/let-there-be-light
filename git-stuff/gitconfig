@@ -41,8 +41,8 @@
 
 [core]
     excludesfile = .DS_Store
-    excludesfile = $(HOME)/.gitignore_global
-	attributesfile = $HOME/neo-human/programs/vanity-fair/let-there-be-light/git-stuff/gitattributes
+    excludesfile = $HOME/.gitignore_global
+	attributesfile = $HOME/.gitattributes
 	#attributesfile = /home/dragon/neo-human/programs/vanity-fair/let-there-be-light/git-stuff/gitattributes
 
 [difftool "sourcetree"]
