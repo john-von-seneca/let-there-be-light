@@ -9,11 +9,11 @@
        "x": 2,
        "y": 18
     },
-    "name": "(828) Inoreader - YouTube Subscriptions - Google Chrome",
+    "name": "Google Chrome",
     "percent": 1,
     "swallows": [
        {
-       "class": "^google\\-chrome\\-unstable$"
+       "class": "^Google\\-chrome\\-unstable$"
        //"class": "^google\\-chrome$"
        // "instance": "^google\\-chrome\\-unstable\\ \\(\\/home\\/dragon\\/\\.config\\/google\\-chrome\\-unstable\\)$",
        // "title": "^\\(828\\)\\ Inoreader\\ \\-\\ YouTube\\ Subscriptions\\ \\-\\ Google\\ Chrome$",
@@ -21,7 +21,7 @@
        // "window_role": "^browser$"
        },
        {
-          "class": "^google\\-chrome$"
+          "class": "^Google\\-chrome.*"
        }
     ],
     "type": "con"
