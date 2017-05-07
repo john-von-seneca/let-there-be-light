@@ -1,7 +1,7 @@
 [alias]
     pr = pull --rebase
     pmo = 'pull --rebase origin $1'
-    prm = "pull --rebase origin master"
+    prm = "pull origin master --rebase"
     dc = diff --cached
     dcw = diff --cached --word-diff
     rh = reset HEAD
