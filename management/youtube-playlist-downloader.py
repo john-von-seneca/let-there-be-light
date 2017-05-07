@@ -14,7 +14,7 @@ def read_playlist(fn_playlist):
 
 def get_parameters():
 	return [ '--continue',
-			 '--sleep-interval=20',
+			 '--sleep-interval=5',
 			 '--sub-lang=en',
 			 # '--write-sub',
 			 '--no-part',
