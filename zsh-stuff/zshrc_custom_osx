@@ -66,8 +66,12 @@ export PATH=$PATH:$HADOOP_HOME/bin
 if [[ `id -un` = "balasanjeevi.b" ]]; then
   echo "osx ola"
 
-  alias rone2me="rsync -azvh --progress --partial --update --exclude='.git/' --compress-level=5 rone:ola/ ~/ola/"
+  #alias rone2me="rsync -azvh --progress --partial --update --exclude='.git/' --compress-level=5 rone:ola/ ~/ola/"
+  alias rone2me="rsync -azvh --progress --partial --update --exclude='.git/' --exclude='.ensime_cache' --exclude='*.crc' --exclude='*.o' --exclude='data/tables/metastore_db/' --exclude='src/metastore_db/' --exclude='metastore_db*' --exclude='target/streams*' --exclude='*.class' --exclude='*.jar' --compress-level=5 rone:ola-stuff/ ~/ola-stuff"
   alias me2rone="rsync -azvh --progress --partial --update --exclude='.git/' --compress-level=5 ~/ola/ rone:ola/"
+
+  alias asgwhdp2me="rsync -azvh --progress --partial --update --exclude='.git/' --compress-level=5 asgwhdp:ola-stuff/bebee/ ~/ola-stuff/bebee/"
+  alias me2asgwhdp="rsync -azvh --progress --partial --update --exclude='.git/' --exclude='.ensime_cache' --exclude='*.crc' --exclude='*.o' --exclude='data/tables/metastore_db/' --exclude='src/metastore_db/' --exclude='metastore_db*' --exclude='target/streams*' --exclude='*.class' --exclude='*.jar' --compress-level=5 ~/ola-stuff/ asgwhdp:ola-stuff/"
 
   alias asgw2me="rsync -azvh --exclude='.git/' --compress-level=5 asgw:ola/ ~/ola/"
   alias me2asgw="rsync -azvh --exclude='.git/' --compress-level=5 ~/ola/ asgw:ola/"
