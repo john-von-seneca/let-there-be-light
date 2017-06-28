@@ -1,0 +1,16 @@
+axes.edgecolor  : bcbcbc
+axes.facecolor: eeeeee
+axes.grid: true
+axes.labelsize: 14
+axes.labelweight: medium
+axes.titlesize: 15
+examples.directory: 
+font.weight: medium
+lines.linewidth : 2.05
+legend.fancybox: true
+legend.fontsize: 14
+patch.edgecolor: eeeeee
+patch.linewidth: 0.5
+svg.fonttype: path
+xtick.labelsize : 13
+ytick.labelsize : 13
