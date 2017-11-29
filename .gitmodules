@@ -4,3 +4,6 @@
 [submodule "vim-stuff/vim/bundle/vim-colors-solarized"]
 	path = vim-stuff/vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "vim-stuff/vim/bundle/Zenburn"]
+	path = vim-stuff/vim/bundle/Zenburn
+	url = https://github.com/jnurmine/Zenburn.git
