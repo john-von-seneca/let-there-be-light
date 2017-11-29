@@ -33,8 +33,8 @@ def script_post_save(model, os_path, contents_manager, **kwargs):
 import subprocess
 def html_toc_post_save(model, os_path, contents_manager, **kwargs):
     print(os_path, "fuck")
-    subprocess.call(["jupyter", "nbconvert", "--to", "html_toc", os_path])
-
-
+    # subprocess.call(["jupyter", "nbconvert", "--to", "html_toc", os_path])
+    subprocess.call(["jupyter", "nbconvert", "--to", "html_with_toclenvs", os_path])
+ 
 c.FileContentsManager.post_save_hook = html_toc_post_save
 
