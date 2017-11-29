@@ -5,6 +5,8 @@ config defaultToCurrentScreen true
 config nudgePercentOf screenSize
 config resizePercentOf screenSize
 
+alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
+
 # Resize Bindings - ctrl + alt for resizing
 bind right:alt;ctrl       resize +5% +0
 bind left:alt;ctrl        resize -5% +0
@@ -24,6 +26,7 @@ bind right:ctrl;cmd  push right bar-resize:screenSizeX*1/2
 bind left:ctrl;cmd   push left  bar-resize:screenSizeX*1/2
 bind up:ctrl;cmd     push up    bar-resize:screenSizeY*3/4
 bind down:ctrl;cmd   push down  bar-resize:screenSizeY/4
+bind m:ctrl;cmd     move screenOriginX;screenOriginY screenSizeX;screenSizeY
 
 if header['set-cookie'] &&
           header['set-cookie'].first &&
