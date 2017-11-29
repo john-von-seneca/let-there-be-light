@@ -70,11 +70,15 @@
     path = ~/.gitconfig_local
 
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 	required = true
 
 [filter "drop_output_ipynb"]
 	#clean = /home/dragon/repos/toobaz/ipynb_output_filter/ipynb_output_filter.py
 	clean = $HOME/repos/toobaz/ipynb_output_filter/ipynb_output_filter.py
 	smudge = cat
+[user]
+	name = jvs
+	email = john.von.seneca@gmail.com
