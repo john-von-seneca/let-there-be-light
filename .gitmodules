@@ -1,0 +1,6 @@
+[submodule "vim-stuff/vim/bundle/vim-multiple-cursors"]
+	path = vim-stuff/vim/bundle/vim-multiple-cursors
+	url = git@github.com:terryma/vim-multiple-cursors.git
+[submodule "vim-stuff/vim/bundle/vim-colors-solarized"]
+	path = vim-stuff/vim/bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
