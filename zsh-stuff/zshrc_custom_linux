@@ -4,8 +4,8 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 #### ENVS
 ## for cuda
-export PATH=/usr/local/cuda-7.0/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda-7.0/lib64:$LD_LIBRARY_PATH
+#export PATH=/usr/local/cuda-7.0/bin:$PATH
+# export LD_LIBRARY_PATH=/usr/local/cuda-7.0/lib64:$LD_LIBRARY_PATH
 ## for cask
 export PATH=~/.cask/bin:$PATH
 #### ENVS
@@ -21,7 +21,7 @@ fi
 export DEFAULT_USER=f
 
 # cuda stuff -- start
-export CUDA_ROOT=/usr/local/cuda-7.0
+export CUDA_ROOT=/usr/local/cuda
 export LD_LIBRARY_PATH=${CUDA_ROOT}/lib64:$LD_LIBRARY_PATH
 PATH=${CUDA_ROOT}/bin:${PATH}
 PATH=$HOME/.gem/ruby/1.9.1/bin:${PATH}

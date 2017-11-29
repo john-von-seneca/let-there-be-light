@@ -173,7 +173,10 @@ alias vfh2start="jupyter3 notebook --no-browser --notebook-dir=~/neo-human/progr
 alias vfhe="cd ~/neo-human/programs/vanity-fair/helium"
 alias lightcd="cd ~/neo-human/repos/let-there-be-light"
 
-alias olastart="jupyter notebook --no-browser --notebook-dir=~/ola --port=8888 --ip=0.0.0.0"
+alias olastart="jupyter notebook --no-browser --notebook-dir=~/ola-stuffs/ --port=8888 --ip=0.0.0.0"
+
+alias repocd="cd ~/repos"
+alias repostart="jupyter notebook --no-browser --notebook-dir=~/repos --port=8892 --ip=0.0.0.0"
 
 alias bi="bundle install"
 #####################################################
