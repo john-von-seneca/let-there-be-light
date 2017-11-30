@@ -1,5 +1,24 @@
 alias mc="make clean"
-alias mw="rm -f welcome; make -j7 welcome"
+OSTYPE=`uname`
+if [[ "$OSTYPE" = "Linux" ]]; then
+  echo "linux-gnu"
+  alias mw="rm -f welcome; make -j7 welcome"
+  #echo "linux done baby"
+elif [[ "$OSTYPE" = "Darwin" ]]; then
+    echo "osx"
+  alias mw="rm -f welcome; make -j3 welcome"
+elif [[ "$OSTYPE" = "cygwin" ]]; then
+        echo "OS TYPE:: cygwin"
+elif [[ "$OSTYPE" = "msys" ]]; then
+        echo "OS TYPE:: msys"
+elif [[ "$OSTYPE" = "win32" ]]; then
+        echo "OS TYPE:: win32"
+elif [[ "$OSTYPE" = "freebsd"* ]]; then
+        echo "OS TYPE:: freebsd"
+else
+        echo "OS TYPE:: unknown"
+fi
+
 alias rw="./welcome"
 alias vw="valgrind --leak-check=full --leak-resolution=high  --tool=memcheck --show-reachable=no --show-leak-kinds=all ./welcome"
 alias cw1="valgrind --tool=callgrind ./welcome"
