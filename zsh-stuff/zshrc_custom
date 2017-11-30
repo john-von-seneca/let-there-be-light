@@ -157,19 +157,14 @@ alias urldecode='python -c "import sys, urllib as ul; \
     print ul.unquote_plus(sys.argv[1])"'
 gitreadme() { less ~/neo-human/repos/$1/README.md}
 
-if [[ "$OSTYPE" = "Linux" ]]; then
-	alias jupyter3=jupyter
-	#echo "linux done baby"
-fi
-
 alias scd="cd ~/neo-human/programs/vanity-fair/scribbles"
 alias sstart="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/vanity-fair/scribbles --port=8888 --ip=0.0.0.0"
 
 alias licd="cd ~/neo-human/programs/vanity-fair/lithium/"
-alias listart="jupyter3 notebook --no-browser --notebook-dir=~/neo-human/programs/vanity-fair/lithium/docs/python --port=8890 --ip=0.0.0.0"
+alias listart="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/vanity-fair/lithium/docs/python --port=8890 --ip=0.0.0.0"
 
 alias vfh2="cd ~/neo-human/programs/vanity-fair/hydrogen"
-alias vfh2start="jupyter3 notebook --no-browser --notebook-dir=~/neo-human/programs/vanity-fair/hydrogen --port=8891 --ip=0.0.0.0"
+alias vfh2start="jupyter notebook --no-browser --notebook-dir=~/neo-human/programs/vanity-fair/hydrogen --port=8891 --ip=0.0.0.0"
 alias vfhe="cd ~/neo-human/programs/vanity-fair/helium"
 alias lightcd="cd ~/neo-human/repos/let-there-be-light"
 
