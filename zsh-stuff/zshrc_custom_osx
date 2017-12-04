@@ -26,7 +26,8 @@ if [ -d "$GHC_DOT_APP" ]; then
   export PATH="${HOME}/.local/bin:${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
 fi
 
-export PATH=/usr/local/texlive/2016/bin/x86_64-darwin:$PATH
+export PATH=/usr/local/texlive/2017/bin/x86_64-darwin:$PATH
+#export PATH=/usr/local/texlive/2017basic/bin/x86_64-darwin:$PATH
 
 ### PKG-CONFIG
 # from https://twdkz.wordpress.com/2015/02/25/haskell-on-yosemite-osx-10-10/
