@@ -18,7 +18,7 @@ LinkFile () {
 		mv $LINK_DST $LINK_DST.bkp.$TIME_NOW
 	fi
 	echo "creating symlink $LINK_DST ... "
-	ln -sr $LINK_SRC $LINK_DST
+	/usr/local/opt/coreutils/libexec/gnubin/ln -sr $LINK_SRC $LINK_DST
 }
 
 
@@ -42,6 +42,8 @@ fi;
 
 LinkFile git-stuff/gitconfig ~/.gitconfig
 LinkFile git-stuff/tigrc ~/.tigrc
+
+LinkFile slate-config ~/.slate
 
 LinkFile weather ~/.weather
 LinkFile conkyrc ~/.conkyrc
